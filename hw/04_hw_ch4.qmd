@@ -1,0 +1,123 @@
+---
+title: "Homework 4"
+subtitle: "Poisson Regression"
+---
+
+
+## Setup
+
+Each of your assignments will begin with the following steps.
+
+-   Going to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
+
+-   Creating a new *R project*, inside your homework folder on the server, and giving it a sensible name such as *homework_4* and having that project in the course folder you created. 
+
+-   Create a new quarto document and give it a sensible name such as *hw4*.
+
+-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.
+
+    ```{r}
+#| label: yaml_example
+#| eval: false
+---
+title: "Document title"
+author: "my name"
+format:
+  html:
+    embed-resources: true
+---
+    ```
+
+## Instructions
+
+Be sure to include the relevant R code as well as full sentences answering each of the questions (i.e. if I ask for the average, you can output the answer in R but **also** write a full sentence with the answer). Be sure to frequently save your files!
+
+Data for the homework will be in the STA363_inst_files -> data folder.
+
+## Exercises
+
+All problems are from {{< var course.text >}} Abbreviated BMLR. 
+
+Use the numbering on the left. The codes are for instructor use (Ex: C1).
+
+### Exercise 1 & 2 
+
+Exercises 1 & 2 involve predicting a __response__ using one or more __explanatory variables__, where these examples have response variables that are counts per some unit of time or space. List the response (both what is being counted and over what unit of time or space) and relevant explanatory variables.  
+
+### Exercise 1
+
+1. (C1) Are the number of motorcycle deaths in a given year related to a state's helmet laws?
+
+### Exercise 2
+
+2. (C2) Does the number of employers conducting on-campus interviews during a year differ for public and private colleges? 
+
+### Exercise 3
+
+3. (C5) Models of the form $Y_i=\beta_0+\beta_1X_i+\epsilon_i, \epsilon_i \sim iidN(0,\sigma)$ are fit using the method of least squares. What method is used to fit Poisson regression models?
+
+### Exercise 4
+
+4. (C6) What should be done before adjusting for overdispersion?
+
+### Exercise 5
+
+5. (C7) Why are quasi-Poisson models used, and how do the results typically compare for corresponding models using regular Poisson regression?
+
+### Exercise 6
+
+6. (C8) Why is the log of mean counts, log($\bar{Y}$), not $\bar{Y}$, plotted against X when assessing the assumptions for Poisson regression? 
+
+### Exercise 7
+
+7. (C9) How can the assumption of *mean=variance* be checked for Poisson regression? What if there are not many repeated observations at each level of X?
+
+### Exercise 8
+
+8. (C10) Is it possible that a predictor is significant for a model fit using Poisson regression, but not for a model for the same data fit using quasi-Poisson regression? Explain.
+
+### Exercise 9
+
+9. (C11) __Fish (or, as they say in French, poisson).__ A state wildlife biologist collected data from 250 park visitors as they left at the end of their stay. Each was asked to report the number of fish they caught during their one-week stay. On average, visitors caught 21.5 fish per week.
+    
+a. Define the response. 
+b. What are the possible values for the response?
+c. What does $\lambda$ represent? 
+
+### Exercise 10
+
+10. (G2) __Elephant mating.__ How does age affect male elephant mating patterns? An article by @Poole1989 investigated whether mating success in male elephants increases with age and whether there is a peak age for mating success. To address this question, the research team followed 41 elephants for one year and recorded both their ages and their number of matings. The data [@Ramsey2002] is found in `elephant.csv`, and the variables are:
+    - `MATINGS` = the number of matings in a given year
+    - `AGE` = the age of the elephant in years.
+    a. Create a histogram of MATINGS. Is there preliminary evidence that number of matings could be modeled as a Poisson response? Explain.
+    b. Plot MATINGS by AGE. Add a least squares line. Is there evidence that modeling matings using a linear regression with age might not be appropriate? Explain.  (Hints: fit a smoother; check residual plots).
+    c. For each age, calculate the mean number of matings. Take the log of each mean and plot it by AGE.
+        i. What assumption can be assessed with this plot?
+        ii. Is there evidence of a quadratic trend on this plot?
+    d. Fit a Poisson regression model with a linear term for AGE. Exponentiate and then interpret the coefficient for AGE. 
+    e. Construct a 95\% confidence interval for the slope and interpret in context (you may want to exponentiate endpoints).
+    f. Are the number of matings significantly related to age? Test with
+        i. a Wald test and
+        ii. a drop in deviance test.
+    g. Add a quadratic term in AGE to determine whether there is a maximum age for the number of matings for  elephants. Is a quadratic model preferred to a linear model? To investigate this question, use
+        i. a Wald test and
+        ii. a drop in deviance test.
+    h. What can we say about the goodness-of-fit of the model with age as the sole predictor? Compare the residual deviance for the linear model to a $\chi^2$ distribution with the residual model degrees of freedom.
+    i. Fit the linear model using quasi-Poisson regression. (Why?)
+        i. How do the estimated coefficients change?
+        ii. How do the standard errors change?
+        iii. What is the estimated dispersion parameter?
+        iv. An estimated dispersion parameter greater than 1 suggests overdispersion. When adjusting for overdispersion, are you more or less likely to obtain a significant result when testing coefficients? Why?  
+
+
+# Submission
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}})
+
+
+

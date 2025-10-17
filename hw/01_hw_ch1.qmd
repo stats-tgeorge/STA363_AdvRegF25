@@ -1,0 +1,73 @@
+---
+title: "Homework 1"
+subtitle: "Review on R, RStudio, and MLR"
+---
+
+```{r include=FALSE}
+
+```
+
+# Getting started
+
+## This One Time
+
+-   Go to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
+
+-   Go to your class folder you made named "STA363"
+
+-   Create a new folder called *FirstInitial_Last_Initial_HW* with your initials. 
+
+## Every Homework
+
+Each of your assignments will begin with the following steps.
+
+-   Finding the instructions on our website: [https://stats-tgeorge.github.io/STA363_AdvReg/](https://stats-tgeorge.github.io/STA363_AdvReg/)
+
+-   Going to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
+
+-   Creating a new *project.* and giving it a sensible name such as *homework_1* and having that project in the course folder you created.
+
+-   Create a new quarto document and give it a sensible name such as *hw1*.
+
+-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.
+
+    ```{r}
+#| label: yaml_example
+#| eval: false
+---
+title: "Document title"
+author: "my name"
+format:
+  html:
+    embed-resources: true
+---
+    ```
+
+# Instructions
+
+Be sure to include the relevant R code as well as full sentences answering each of the questions (i.e. if I ask for the average, you can output the answer in R but **also** write a full sentence with the answer). Be sure to frequently save your files!
+
+Data for the homework will be in the STA363_inst_files -> data folder.
+
+# Exercises
+
+All problems are from {{< var course.text >}}. Abbreviated BMLR. 
+
+- Conceptual 1B
+- Conceptual2a-d
+- Conceptual Number 3
+- Guided Number 3
+ 
+Please do not give them new numbers. If you want to be brief, use a code such as C1B for the first problem. 
+
+# Submission
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}})
+
+
+
