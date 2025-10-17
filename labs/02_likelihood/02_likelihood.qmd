@@ -1,6 +1,7 @@
 ---
 title: 'Chapter 2 - Likelihoods'
 subtitle: 'Does having boys or girls run in the family? '
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 

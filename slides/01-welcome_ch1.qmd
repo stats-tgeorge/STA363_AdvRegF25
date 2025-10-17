@@ -137,10 +137,10 @@ $$\begin{aligned}\pi = P(y = 1 | x) \hspace{2mm} &\Rightarrow \hspace{2mm} \text
 
 **Lectures**
 
-- Some traditional lecture
+- Lecture
 - Individual and group labs
-- Bring fully-charged laptop
-- Mini-projects 
+- Bring a fully-charged laptop
+- Mini-projects weekly
 - Exams
 
 . . .
@@ -176,8 +176,8 @@ $$\begin{aligned}\pi = P(y = 1 | x) \hspace{2mm} &\Rightarrow \hspace{2mm} \text
 
 
 ## Using R / RStudio
-  - RStudio Server is installed and should be used
-  - [{{< var college.rstudio >}}]({{< var college.rstudio >}})
+- RStudio Server is installed and should be used
+- [{{< var college.rstudio >}}]({{< var college.rstudio >}})
 
 
 ## Activities & Assessments {.smaller}
@@ -185,15 +185,17 @@ $$\begin{aligned}\pi = P(y = 1 | x) \hspace{2mm} &\Rightarrow \hspace{2mm} \text
 
 **Readings**
 
-  - Primarily from *Beyond Multiple Linear Regression* 
-  - Recommend reading assigned text before lecture
+- Primarily from *Beyond Multiple Linear Regression* 
+- Recommend reading assigned text before lecture
 
 . . .
 
 **Homework**
-  - Primarily from *Beyond Multiple Linear Regression* 
-  - Individual assignments
-  - Work together but must complete your own work. Discuss but don't copy. 
+- Primarily from *Beyond Multiple Linear Regression* 
+
+- Individual assignments
+
+- Work together but must complete your own work. Discuss but don't copy. 
 
 
 ## Activities & Assessments {.smaller}
@@ -227,9 +229,9 @@ Final grades will be calculated as follows
 
 | Category              | Points     |
 |-----------------------|------------|
-| Homework              | 200        |
-| Participation         | 100        |
-| Labs and Mini Projects| 300        |
+| Homework              | 300        |
+| Labs & Participation  | 75         |
+| Mini Projects         | 225        |
 | Exams                 | 400        |
 | Total                 | 1000       |
 
@@ -246,7 +248,6 @@ See Syllabus on [website]({{< var course.url >}}) for letter grade thresholds.
   - Make appointments by going to [{{< var instructor.appointment_url >}}]({{< var instructor.appointment_url >}})
 
 - **Email** {{< var instructor.name_no_title >}} for private questions regarding personal matters or grades. 
-  - Please put **{{< var course.number >}}** in the subject line since I am also teaching capstone this semester
 
 - College support at [{{< var college.support >}}]({{< var college.support >}}).
 
@@ -257,6 +258,7 @@ See Syllabus on [website]({{< var course.url >}}) for letter grade thresholds.
 ```{r echo=T, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(tidymodels)
+library(latex2exp)
 library(GGally)
 library(knitr)
 library(patchwork)
@@ -336,8 +338,12 @@ geom_vline(xintercept=breaks, lty=2, color = "grey") +
   labs(x = "x", 
        y = "y") +
   theme_classic() + 
-  annotate("text", x = 10, y = 600, label = latex2exp::TeX("$\\mu_{Y|X} = \\beta_0 + \\beta_1X$"), color = "steelblue", size = 8) +
-  annotate("text", x = 20, y = 400, label = latex2exp::TeX("$\\sigma^2$"), color = "red", size = 8) +
+  annotate("text", x = 10, y = 600, 
+           label = as.character(TeX("$\\mu_{Y|X} = \\beta_0 + \\beta_1X$")), color = "steelblue", size = 8,
+           parse=T) +
+  annotate("text", x = 20, y = 400, 
+           label = as.character(TeX("$\\sigma^2$")), color = "red", size = 8,
+           parse = T) +
   theme(axis.title = element_text(size = 16),
         axis.ticks = element_blank(), 
         axis.text.x = element_blank(), 
@@ -346,13 +352,15 @@ geom_vline(xintercept=breaks, lty=2, color = "grey") +
   
 ```
 
+
+
 ::: aside
 Modified from Figure 1.1. in BMLR]
 :::
 
 :::
 
-::: {.column}
+::: {.column width = "60%"}
 
 - **L**inearity: Linear relationship between mean of the response $Y$ and the predictor $X$
 
@@ -408,19 +416,20 @@ Today's data is from the Kentucky Derby, an annual 1.25-mile horse race held at 
 
 - `speed`: Average speed of the winner in feet per second (ft/s)]
 
-
-**Additional variable**
-
-- `winner`: Winning horse
-:::
-
-:::{.column}
-
 **Predictor variables**
 
 - `year`: Year of the race
 - `condition`: Condition of the track (good, fast, slow)
-- `starters`: Number of horses who raced]
+- `starters`: \# of horses who raced
+
+:::
+
+:::{.column}
+**Additional variable**
+
+- `winner`: Winning horse
+
+
 
 :::
 ::::
@@ -1065,8 +1074,12 @@ geom_vline(xintercept=breaks, lty=2, color = "grey") +
   labs(x = "x", 
        y = "y") +
   theme_classic() + 
-  annotate("text", x = 10, y = 600, label = latex2exp::TeX("$\\mu_{Y|X} = \\beta_0 + \\beta_1X$"), color = "steelblue", size = 8) +
-  annotate("text", x = 20, y = 400, label = latex2exp::TeX("$\\sigma^2$"), color = "red", size = 8) +
+  annotate("text", x = 10, y = 600, 
+           label = as.character(TeX("$\\mu_{Y|X} = \\beta_0 + \\beta_1X$")), 
+           color = "steelblue", size = 8, parse = T) +
+  annotate("text", x = 20, y = 400, 
+           label = as.character(TeX("$\\sigma^2$")), color = "red", size = 8,
+           parse = T) +
   theme(axis.title = element_text(size = 16),
         axis.ticks = element_blank(), 
         axis.text.x = element_blank(), 
@@ -1081,17 +1094,17 @@ geom_vline(xintercept=breaks, lty=2, color = "grey") +
 
 - $\hat{\sigma}$ is the **regression standard error** 
 
-. . .
 
-$$\hat{\sigma} = \sqrt{\frac{\sum_{i=1}^n(y_i - \hat{y}_i)^2}{n - p - 1}} = \sqrt{\frac{\sum_{i=1}^n e_i^2}{n-p-1}}$$
+- $\hat{\sigma} = \sqrt{\frac{\sum_{i=1}^n(y_i - \hat{y}_i)^2}{n - p - 1}} = \sqrt{\frac{\sum_{i=1}^n e_i^2}{n-p-1}}$
+
 :::
 
 
 ## Acknowledgements
 
-These slides are based on content in [BMLR: Chapter 1 - Review of Multiple Linear Regression](https://bookdown.org/roback/bookdown-BeyondMLR/ch-MLRreview.html)
+- These slides are based on content in [BMLR: Chapter 1 - Review of Multiple Linear Regression](https://bookdown.org/roback/bookdown-BeyondMLR/ch-MLRreview.html)
 
-Initial versions of the slides are by Dr. Maria Tackett, Duke University
+- Initial versions of the slides are by Dr. Maria Tackett, Duke University
 
 
 

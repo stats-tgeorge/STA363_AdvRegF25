@@ -1,6 +1,7 @@
 ---
 title: 'Chapter 6 - Binomial Regression'
 subtitle: 'Moth Coloration and Natural Selection'
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 

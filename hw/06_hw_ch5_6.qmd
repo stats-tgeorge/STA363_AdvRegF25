@@ -1,6 +1,7 @@
 ---
-title: "Homework 6"
-subtitle: "Ch 6: Logistic Regression"
+title: Homework 6
+subtitle: 'Ch 6: Logistic Regression'
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 `r if (knitr:::is_html_output()) '\\newcommand{\\E}{\\operatorname{E}}'`

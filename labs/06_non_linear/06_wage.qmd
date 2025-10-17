@@ -1,6 +1,7 @@
 ---
 title: "Moving Beyond Linearity - Chapter 7 (ISLR)"
 subtitle: "Wage Data"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Lab Setup

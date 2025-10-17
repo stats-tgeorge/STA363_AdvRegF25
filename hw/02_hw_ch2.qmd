@@ -1,6 +1,7 @@
 ---
-title: "Homework 2"
-subtitle: "Likelihoods"
+title: Homework 2
+subtitle: Likelihoods
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 

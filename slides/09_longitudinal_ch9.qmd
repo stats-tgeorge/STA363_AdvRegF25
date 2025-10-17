@@ -8,6 +8,7 @@ format:
   html:
     output-file: "09_longitudinal_ch9_o.html"
 logo: "../img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Setup

@@ -2,6 +2,7 @@
 title: "Linear Regression Review Lab"
 author: "Tyler George (original Ann Cannon and Paul Roback)"
 editor: visual
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 **Example: Sex discrimination in bank salaries.** In the 1970’s, Harris Trust was sued for sex discrimination in the salaries it paid its employees. One approach to addressing this issue was to examine the starting salaries of all skilled, entry-level clerical workers between 1965 and 1975. The data is saved under banksalary.csv, and relevant R code can be found in the STA363_inst_files folder on the home directory of the RStudio Server. *banksalary.qmd*.

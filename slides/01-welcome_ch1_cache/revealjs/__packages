@@ -17,6 +17,7 @@ modeldata
 parsnip
 recipes
 rsample
+tailor
 tune
 workflows
 workflowsets
@@ -27,3 +28,4 @@ patchwork
 viridisLite
 viridis
 ggfortify
+latex2exp

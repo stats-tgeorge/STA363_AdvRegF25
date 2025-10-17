@@ -8,6 +8,7 @@ format:
   html:
     output-file: "04_poisson_ch4_o.html"
 logo: "../img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Setup

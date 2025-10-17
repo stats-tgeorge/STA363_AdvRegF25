@@ -8,6 +8,7 @@ format:
   html:
     output-file: "05_glm_ch5_o.html"
 logo: "/img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}

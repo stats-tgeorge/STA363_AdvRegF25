@@ -3,6 +3,7 @@ title: 'Chapter 4 - Poisson Regression'
 subtitle: 'Do animals bite more during a full moon?'
 execute:
   eval: false
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Lab Setup

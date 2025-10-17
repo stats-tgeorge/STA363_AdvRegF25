@@ -1,6 +1,7 @@
 ---
-title: "Homework 7"
-subtitle: "Ch 7: Correlated Data and Ch 8: Multilevel Models"
+title: Homework 7
+subtitle: 'Ch 7: Correlated Data and Ch 8: Multilevel Models'
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 `r if (knitr:::is_html_output()) '\\newcommand{\\E}{\\operatorname{E}}'`

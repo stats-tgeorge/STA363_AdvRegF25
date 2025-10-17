@@ -8,6 +8,7 @@ format:
   html:
     output-file: "10_non_linear_ch7_o.html"
 logo: "../img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Setup

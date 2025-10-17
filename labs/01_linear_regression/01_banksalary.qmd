@@ -18,7 +18,7 @@ Since this our first lab, I suggest you get setup for files in the following way
 
 ## Introduction
 
-**Example: Sex discrimination in bank salaries.** In the 1970’s, Harris Trust was sued for sex discrimination in the salaries it paid its employees. One approach to addressing this issue was to examine the starting salaries of all skilled, entry-level clerical workers between 1965 and 1975. The data is saved under banksalary.csv, and relevant R code can be found in the STA363_inst_files folder on the home directory of the RStudio Server. *banksalary.qmd*.
+**Example: Sex discrimination in bank salaries.** In the 1970’s, Harris Trust was sued for sex discrimination in the salaries it paid its employees. One approach to addressing this issue was to examine the starting salaries of all skilled, entry-level clerical workers between 1965 and 1975. The data is saved under banksalary.csv, in the data folder of the project. You will find relevant code at the end of these instructions. 
 
 Data from skilled entry-level clerical workers at bank being sued for sex discrimination in 1970s (from Statistical Sleuth, Ch 12):
 
@@ -69,21 +69,21 @@ R2
 
 Significance:
 
-11. Does model1 from question 10 meet all linear regression assumptions? List each assumption and how you decided if it was met or not.
+11. Does **model1** from question 10 meet all linear regression assumptions? List each assumption and how you decided if it was met or not.
 
 12. Is a model with all 4 confounding variables better than a model with just education? Justify with an appropriate significance test in addition to summary statistics of model performance.
 
-13. You should have noticed that the term for age was not significant in the model3. What does this imply about age and about future modeling steps?
+13. You should have noticed that the term for age was not significant in the model with four predictors (*senior*, *age*, *educ*, and *exper*). What does this imply about age and about future modeling steps?
 
-14. The relationship between experience and beginning salary exhibits some curvature. How might it be interpreted in this context? Determine whether a quadratic term in experience improves a model without curvature.
+14. The relationship between experience and beginning salary exhibits some curvature. How might it be interpreted in this context? Determine whether a quadratic term in experience improves a model without curvature (see code for **model5**).
 
-15. Based on model6, what conclusions can be drawn about sex discrimination at Harris Trust? Do these conclusions have to be qualified at all, or are they pretty clear cut? Interpret a 95% confidence interval for the male indicator variable in context to help with your response.
+15. Consider a model with the predictors *senior*, *educ*, *exper*, and *male*. What conclusions can be drawn about sex discrimination at Harris Trust? Do these conclusions have to be qualified at all, or are they pretty clear cut? Interpret a 95% confidence interval for the male indicator variable in context to help with your response (see code for **model6**).
 
 16. Do any explanatory variables exhibit an interaction with sex. If so, what are the implications for your answer in (15)?
 
 17. Often salary data is logged before analysis. Would you recommend logging starting salary in this study? Support your decision analytically.
 
-18. Regardless of your answer to (17), provide an interpretation for the coefficient for the male coefficient in model6a after logging starting salary.
+18. **Model6a** predicts *log(bsal)* with predictors *senior*, *educ*, *exper*, and *male*. Regardless of your answer to (17), provide an interpretation for the coefficient for the male coefficient in **model6a** after logging starting salary.
 
 
 ## Code 

@@ -8,6 +8,7 @@ format:
   html:
     output-file: "08_multilevel_mod_ch8_o.html"
 logo: "../img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Setup

@@ -8,6 +8,7 @@ format:
   html:
     output-file: "07_correlated_data_ch7_o.html"
 logo: "../img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 

@@ -8,6 +8,7 @@ format:
   html:
     output-file: "02_likelihoods_ch2_o.html"
 logo: "../img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ```{r echo = F}

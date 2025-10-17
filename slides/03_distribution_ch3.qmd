@@ -8,6 +8,7 @@ format:
   html:
     output-file: "03_distribution_ch3_o.html"
 logo: "../img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 

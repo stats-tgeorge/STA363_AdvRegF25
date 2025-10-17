@@ -8,6 +8,7 @@ format:
   html:
     output-file: "06_logistic_ch6_o.html"
 logo: "../img/favicon.png"
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Setup
