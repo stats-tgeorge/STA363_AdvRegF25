@@ -368,7 +368,7 @@ Fill in **A** and **B**
 
 
 
-## Likelihood function 
+## Likelihood function {.smaller}
 
 $$\begin{aligned}Lik(p_{H| N}, p_{H|H Bias}, p_{H |V Bias}) &= [(p_{H| N})^{25}(1 - p_{H|N})^{23}(p_{H| H Bias})^8 \\ &(1 - p_{H| H Bias})^{12}(p_{H| V Bias})^{13}(1-p_{H|V Bias})^9]\end{aligned}$$      
 
