@@ -8,7 +8,6 @@ format:
   html:
     output-file: "02_likelihoods_ch2_o.html"
 logo: "../img/favicon.png"
-categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ```{r echo = F}
@@ -94,8 +93,9 @@ We will treat the games as independent in this analysis.
 ## Different likelihood models {.smaller}
 
 **Model 1 (Unconditional Model)**: What is the probability the referees call a foul on the home team, assuming foul calls within a game are independent? 
+ 
+. . .
 
-<br> 
 
 **Model 2 (Conditional Model)**: 
 
@@ -451,6 +451,7 @@ The **maximum likelihood estimate (MLE)** is the value between 0 and 1 where we 
 
 - $\hat{p}_H = 46/90 = 0.511$
 
+. . .
 
 **Model 2 (Conditional Model)**
 
@@ -630,7 +631,7 @@ Find the MLEs for each model and plug them into the log-likelihood functions.
 
 **Model 1:**
 
-- $\hat{p}_H = 46/90 = 0.511$
+$\hat{p}_H = 46/90 = 0.511$
 
 ```{r}
 loglik1 <- function(ph){
@@ -641,7 +642,7 @@ loglik1(46/90)
 
 :::
 
-. . .
+
 
 :::{.column}
 **Model 2**
@@ -650,7 +651,6 @@ loglik1(46/90)
 - $\hat{p}_{H|H Bias} = 8 /20 = 0.4$
 - $\hat{p}_{H|V Bias} = 13/ 22 = 0.591$
 
-. . .
 
 ```{r}
 loglik2 <- function(phn, phh, phv) {
@@ -731,7 +731,7 @@ The p-value is very large, so we fail to reject $H_0$. We do not have convincing
 
 :::
 
-. . .
+
 
 :::{.column}
 **BIC** = -2(max log-likelihood) + plog(n)
@@ -741,11 +741,12 @@ The p-value is very large, so we fail to reject $H_0$. We do not have convincing
 (Model2_BIC <-2 * loglik2(25/48, 8/20, 13/22) + 3 * log(30))
 ```
 
-**Choose Model 1, the unconditional model, based on AIC and BIC**
-
 :::
 ::::
 
+. . .
+
+**Choose Model 1, the unconditional model, based on AIC and BIC**
 
 
 ## Looking ahead{.smaller}

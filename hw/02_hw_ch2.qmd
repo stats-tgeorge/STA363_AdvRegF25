@@ -1,7 +1,6 @@
 ---
 title: Homework 2
 subtitle: Likelihoods
-categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 
@@ -64,9 +63,7 @@ Use the numbering on the left. The codes are for instructor use (Ex: C1).
 
 4. (G3) Write out an expression for the likelihood of seeing our NLSY data (5,416 boys and 5,256 girls) if the true probability of a boy is:
     (a) $p_B=0.5$  
-    (b) $p_B=0.45$  
-    (c) $p_B= 0.55$  
-    (d) $p_B= 0.5075$  
+    (b) $p_B= 0.5075$  
     - Compute the value of the  log-likelihood for each of the values of $p_B$ above.
     - Which of these four possibilities, $p_B=0.45, p_B=0.5,  p_B=0.55,$ or $p_B=0.5075$ would be the best estimate
       of $p_B$ given what we observed (our data)?
