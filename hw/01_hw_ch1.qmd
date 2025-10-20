@@ -21,11 +21,11 @@ subtitle: Review on R, RStudio, and MLR
 
 Each of your assignments will begin with the following steps.
 
--   Finding the instructions on our website: <https://stats-tgeorge.github.io/STA363_AdvReg/>
+-   Finding the instructions on our website: [{{< var course.url >}}]({{< var course.url >}}).
 
--   Going to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
+-   Going to our RStudio Server at <http://turing.cornellcollege.edu:8787/>.
 
--   Creating a new *project.* and giving it a sensible name such as *homework_1* and having that project in the course folder you created.
+-   Creating a new *project* and giving it a sensible name such as *homework_1* and having that project in the course folder you created.
 
 -   Create a new quarto document and give it a sensible name such as *hw1*.
 
