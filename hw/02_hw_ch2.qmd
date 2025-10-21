@@ -77,7 +77,7 @@ Use the numbering on the left. The codes are for instructor use (Ex: C1).
 
     - Hot Hand (2 parameters): $p_B$ = probability of making a basket after a miss (or the first shot of a game); $p_{B|B}$ = probability of making a basket after making the previous shot.
 
-    a. Fill out Table \@ref(tab:hothandchp2)---write out the contribution of each game to the likelihood for both models along with the total likelihood for each model.
+    a. Fill out Table below. Write out the contribution of each game to the likelihood for both models along with the total likelihood for each model.
 
     b. Given that, for the No Hot Hand model, $\textrm{Lik}(p_B)=p_B^{10}(1-p_B)^{15}$ for the 5 games where we collected data, how do we know that 0.40 (the maximum likelihood estimator (MLE) of $p_B$) is a better estimate than, say, 0.30?
 

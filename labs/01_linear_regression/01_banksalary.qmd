@@ -69,7 +69,7 @@ R2
 
 Significance:
 
-11. Does **model1** from question 10 meet all linear regression assumptions? List each assumption and how you decided if it was met or not.
+11. Does **model2** from question 10 meet all linear regression assumptions? List each assumption and how you decided if it was met or not.
 
 12. Is a model with all 4 confounding variables better than a model with just education? Justify with an appropriate significance test in addition to summary statistics of model performance.
 

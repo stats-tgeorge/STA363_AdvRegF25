@@ -8,7 +8,6 @@ format:
   html:
     output-file: "03_distribution_ch3_o.html"
 logo: "../img/favicon.png"
-categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 
@@ -140,6 +139,7 @@ P(Y=y) = \binom{n}{y} p^y (1-p)^{n-y} \quad \textrm{for} \quad y = 0, 1, \ldots,
 ## Binomial Distribution Graphs {.smaller}
 - On the left side $n$ remains constant. 
 - We see that as $p$ increases, the center of the distribution ($\E(Y) = np$) shifts right. 
+- $E(\cdot)$ is the mean of a random variable 
 - On the right, $p$ is held constant. 
 - As $n$ increases, the distribution becomes less skewed.
 
@@ -156,6 +156,7 @@ P(Y=y) = \binom{n}{y} p^y (1-p)^{n-y} \quad \textrm{for} \quad y = 0, 1, \ldots,
         &= p^y(1-p)^{1-y}\quad \textrm{for}\quad y = 0, 1,
 \end{align*}
 a Bernoulli distribution! 
+
 - In fact, Bernoulli random variables are a special case of binomial random variables where $n=1$.
 
 ## Graphing/calling in R 
@@ -200,7 +201,7 @@ P(Y=y) = \binom{y + r - 1}{r-1} (1-p)^{y}(p)^r \quad \textrm{for}\quad y = 0, 1,
 
 ## Negative Binomial RV  {.smaller}
 
-- If $Y \sim \textrm{Negative Binomial}(r, p)$ then $\E(Y) = \frac{r(1-p)}{p}$ and $\SD(Y) = \sqrt{\frac{r(1-p)}{p^2}}$. 
+- If $Y \sim \textrm{Negative Binomial}(r, p)$ then $E(Y) = \frac{r(1-p)}{p}$ and $\SD(Y) = \sqrt{\frac{r(1-p)}{p^2}}$. 
 
 ## Negative Binomial RV  {.smaller}
 
@@ -271,8 +272,6 @@ grid.arrange(NBin1, NBin2, NBin3, ncol = 1)
 which is the probability mass function of a geometric random variable! 
 
 - Thus, a geometric random variable is, in fact, a special case of a negative binomial random variable.
-
-- While negative binomial random variables typically are expressed as above using binomial coefficients (expressions such as $\binom{x}{y}$), we can generalize our definition to allow non-integer values of $r$. 
 
 - R function `dnbinom(y, r, p)` for the probability of $y$ failures before the $r$^th^ success given probability $p$.
 
@@ -386,9 +385,6 @@ Exponential distributions with $\lambda = 0.5, 1,$ and $5$.
 
 ### Plot 
 
-::::{.columns}
-:::{.column width="70%"}
-
 ```{r, multExp, fig.align="center",out.width="60%",fig.cap= 'Exponential Distribution', echo=FALSE, warning=FALSE, message=FALSE}
 #exponentialPlots
 x=seq(0,4,by=0.01)  # possible values
@@ -409,19 +405,11 @@ ggplot(data = Expdf, aes(x = x, y = value, color = Lambda)) +
   xlim(0,4) + ylim(0,3)
 ```
 
-:::
-
-:::{.column}
-
-
 - As $\lambda$ increases, $\E(Y)$ tends towards 0, and distributions "die off" quicker. 
-
-:::
-::::
 
 ### Code 
 
-```{r, multExp2, include=T,eval=T}
+```{r, multExp2, include=T,eval=F}
 #exponentialPlots
 x=seq(0,4,by=0.01)  # possible values
 probex1 <- dexp(x,.5)  # P(Y=y)
@@ -460,7 +448,7 @@ f(y) = \frac{\lambda^r}{\Gamma(r)} y^{r-1} e^{-\lambda y}\quad \textrm{for} \qua
 - If $Y \sim \textrm{Gamma}(r, \lambda)$ then $\E(Y) = r/\lambda$ and $\SD(Y) = \sqrt{r/\lambda^2}$. 
 - Note: $\Gamma(r)=(r-1)!$ (There is more to it)
 
-## Gamma Distribution
+## Gamma Distribution {.smaller}
 
 :::{.panel-tabset}
 
