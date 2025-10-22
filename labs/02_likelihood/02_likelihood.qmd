@@ -32,7 +32,7 @@ Illustrate the process graphically, and report the maximum value of the likeliho
 2. Apply Model 1 to the NLSY data (families in Table 2.4 below who have 3 or fewer children).  Find the MLE for   by adapting the R code for (1). There are 5,626 families in the table. 
 
 
-```{r, include=FALSE}
+```{r}
 Famcomp <- c("B","G","BB","BG","GB","GG","BBB","BBG",
              "BGG","BGB","GBB","GGB","GBG","GGG")
 Numfams <- c(930,951,582,666,666,530,186,177,173,
