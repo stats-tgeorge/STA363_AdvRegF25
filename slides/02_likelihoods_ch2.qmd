@@ -441,8 +441,6 @@ $$\begin{aligned}Lik(p_{H| N}, p_{H|H Bias}, p_{H |V Bias}) &= [(p_{H| N})^{25}(
 
 The **maximum likelihood estimate (MLE)** is the value between 0 and 1 where we are most likely to see the observed data.
 
-. . .
-
 ::::{.columns}
 
 :::{.column}
@@ -493,8 +491,6 @@ We would like to find the MLEs for $p_{H| N}, p_{H|H Bias}, \text{ and }p_{H |V 
 ## Finding MLEs using graphs {.smaller}
 
 - We need to find the MLEs for three parameters, therefore we would need to visualize a 4-dimensional object to find the MLEs from a graph. Given the difficulty of this task and the lack of precision in the estimates from this approach, we should rely on other approaches to find the MLEs in this instance.
-
-. . .
 
 - We also can't use calculus... that leaves only 1 approach.... optimization via  grid search or *optim* in R
 
@@ -723,11 +719,18 @@ The p-value is very large, so we fail to reject $H_0$. We do not have convincing
 
 **AIC** = -2(max log-likelihood) + 2p
 
+Unconditional Model 
 
 ```{r}
 (Model1_AIC <- 2 * loglik1(46/90) + 2 * 1)
+```
+
+Conditional Model 
+
+```{r}
 (Model2_AIC <-2 * loglik2(25/48, 8/20, 13/22) + 2 * 3)
 ```
+
 
 :::
 
@@ -736,10 +739,18 @@ The p-value is very large, so we fail to reject $H_0$. We do not have convincing
 :::{.column}
 **BIC** = -2(max log-likelihood) + plog(n)
 
+Unconditional Model 
+
 ```{r}
 (Model1_BIC <- 2 * loglik1(46/90) + 1 * log(30))
+```
+
+Conditional Model 
+
+```{r}
 (Model2_BIC <-2 * loglik2(25/48, 8/20, 13/22) + 3 * log(30))
 ```
+
 
 :::
 ::::
