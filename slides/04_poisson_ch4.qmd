@@ -158,25 +158,28 @@ Example adapted from [Introduction to Probability Theory Example 28-2](https://o
 
 
 # Poisson regression
+
 ## Poisson regression{.smaller}
 
 **The data: Household size in the Philippines**
-
-<br> 
 
 The data [fHH1.csv](data/fHH1.csv) come from the 2015 Family Income and Expenditure Survey conducted by the Philippine Statistics Authority. 
 
 **Goal**: Understand the association between household size and various characteristics of the household
 
 **Response**: 
+
 - `total`: Number of people in the household other than the head
 
 :::: {.columns}
 ::: {.column}
 
 **Predictors**: 
+
 - `location`: Where the house is located
+
 - `age`: Age of the head of household
+
 - `roof`: Type of roof on the residence (proxy for wealth)
 
 :::
@@ -185,6 +188,7 @@ The data [fHH1.csv](data/fHH1.csv) come from the 2015 Family Income and Expendit
 
 
 **Other variables**: 
+
 - `numLT5`: Number in the household under 5 years old 
 
 :::
@@ -442,13 +446,13 @@ $$-0.0047 \pm 1.96 \times 0.0009 = \mathbf{(-.0065, -0.0029)}$$
 
 Question: Interpret the interval in terms of the change in mean household size. 
 
-## **Which can best help us determine whether Model 1 is a good fit?**
+## **Which can help determine if Model 1 is a good fit?** {.smaller}
 
 :::{.panel-tabset}
 
 ### Plots
 
-```{r echo = F}
+```{r echo = F, out.width="70%"}
 p1 <- ggplot(data = hh_data, aes(x = age, y = total)) + 
   geom_point() + 
   labs(y = "Total household size", 
@@ -595,8 +599,6 @@ Suppose we want to add `location` to the model, so we compare the following mode
 
 Which of the following are reliable ways to determine if `location` should be added to the model? 
 
-. . .
-
 - Drop-in-deviance test 
 - Use the p-value for each coefficient
 - Likelihood ratio test
@@ -736,6 +738,8 @@ p1 + p2
 - **Goal**: Use the (residual) deviance to assess how much the predicted values differ from the observed values. Recall $(\text{deviance}) = \sum_{i=1}^{n}(\text{deviance residual})_i^2$
 
 - If the model sufficiently fits the data, then 
+
+. . .
 
 $$\text{deviance} \sim \chi^2_{df}$$ 
 

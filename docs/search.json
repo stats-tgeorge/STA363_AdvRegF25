@@ -3758,7 +3758,7 @@
     "href": "slides/04_poisson_ch4_o.html#poisson-regression-1",
     "title": "Poisson Regression",
     "section": "Poisson regression",
-    "text": "Poisson regression\nThe data: Household size in the Philippines\n\nThe data fHH1.csv come from the 2015 Family Income and Expenditure Survey conducted by the Philippine Statistics Authority.\nGoal: Understand the association between household size and various characteristics of the household\nResponse: - total: Number of people in the household other than the head\n\n\nPredictors: - location: Where the house is located - age: Age of the head of household - roof: Type of roof on the residence (proxy for wealth)\n\nOther variables: - numLT5: Number in the household under 5 years old"
+    "text": "Poisson regression\nThe data: Household size in the Philippines\nThe data fHH1.csv come from the 2015 Family Income and Expenditure Survey conducted by the Philippine Statistics Authority.\nGoal: Understand the association between household size and various characteristics of the household\nResponse:\n\ntotal: Number of people in the household other than the head\n\n\n\nPredictors:\n\nlocation: Where the house is located\nage: Age of the head of household\nroof: Type of roof on the residence (proxy for wealth)\n\n\nOther variables:\n\nnumLT5: Number in the household under 5 years old"
   },
   {
     "objectID": "slides/04_poisson_ch4_o.html#the-data",
@@ -3838,11 +3838,11 @@
     "text": "What are plausible values for the coefficient of age?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\nconf.low\nconf.high\n\n\n\n\n(Intercept)\n1.5499\n0.0503\n30.8290\n0\n1.4512\n1.6482\n\n\nage\n-0.0047\n0.0009\n-5.0258\n0\n-0.0065\n-0.0029\n\n\n\n\n\n95% confidence interval for the coefficient of age\n\\[\\hat{\\beta}_1 \\pm Z^{*}\\times SE(\\hat{\\beta}_1)\\] \\[-0.0047 \\pm 1.96 \\times 0.0009 = \\mathbf{(-.0065, -0.0029)}\\]\n. . .\nQuestion: Interpret the interval in terms of the change in mean household size."
   },
   {
-    "objectID": "slides/04_poisson_ch4_o.html#which-can-best-help-us-determine-whether-model-1-is-a-good-fit",
-    "href": "slides/04_poisson_ch4_o.html#which-can-best-help-us-determine-whether-model-1-is-a-good-fit",
+    "objectID": "slides/04_poisson_ch4_o.html#which-can-help-determine-if-model-1-is-a-good-fit",
+    "href": "slides/04_poisson_ch4_o.html#which-can-help-determine-if-model-1-is-a-good-fit",
     "title": "Poisson Regression",
-    "section": "Which can best help us determine whether Model 1 is a good fit?",
-    "text": "Which can best help us determine whether Model 1 is a good fit?\n\nPlotsCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np1 &lt;- ggplot(data = hh_data, aes(x = age, y = total)) + \n  geom_point() + \n  labs(y = \"Total household size\", \n       title = \"Plot A\")\n\np2 &lt;- hh_data |&gt;\n  group_by(age) |&gt; \n  summarise(mean = mean(total)) |&gt;\n  ggplot(aes(x = age, y = mean))+ \n  geom_point() + \n  labs(y = \"Empirical mean household size\", \n       title = \"Plot B\")\n\np3 &lt;- hh_data |&gt;\n  group_by(age) |&gt; \n  summarise(log_mean = log(mean(total))) |&gt;\n  ggplot(aes(x = age, y = log_mean)) + \n  geom_point() + \n  labs(y = \"Log empirical mean household size\", \n       title = \"Plot C\")\n\np1 + p2 + p3 + plot_annotation(tag_levels = 'A')"
+    "section": "Which can help determine if Model 1 is a good fit?",
+    "text": "Which can help determine if Model 1 is a good fit?\n\nPlotsCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np1 &lt;- ggplot(data = hh_data, aes(x = age, y = total)) + \n  geom_point() + \n  labs(y = \"Total household size\", \n       title = \"Plot A\")\n\np2 &lt;- hh_data |&gt;\n  group_by(age) |&gt; \n  summarise(mean = mean(total)) |&gt;\n  ggplot(aes(x = age, y = mean))+ \n  geom_point() + \n  labs(y = \"Empirical mean household size\", \n       title = \"Plot B\")\n\np3 &lt;- hh_data |&gt;\n  group_by(age) |&gt; \n  summarise(log_mean = log(mean(total))) |&gt;\n  ggplot(aes(x = age, y = log_mean)) + \n  geom_point() + \n  labs(y = \"Log empirical mean household size\", \n       title = \"Plot C\")\n\np1 + p2 + p3 + plot_annotation(tag_levels = 'A')"
   },
   {
     "objectID": "slides/04_poisson_ch4_o.html#model-2-add-a-quadratic-effect-for-age",
@@ -3891,7 +3891,7 @@
     "href": "slides/04_poisson_ch4_o.html#question",
     "title": "Poisson Regression",
     "section": "Question",
-    "text": "Question\nWhich of the following are reliable ways to determine if location should be added to the model?\n. . .\n\nDrop-in-deviance test\nUse the p-value for each coefficient\nLikelihood ratio test\nNested F Test\nBIC"
+    "text": "Question\nWhich of the following are reliable ways to determine if location should be added to the model?\n\nDrop-in-deviance test\nUse the p-value for each coefficient\nLikelihood ratio test\nNested F Test\nBIC"
   },
   {
     "objectID": "slides/04_poisson_ch4_o.html#add-location-to-the-model-1",
@@ -3933,7 +3933,7 @@
     "href": "slides/04_poisson_ch4_o.html#goodness-of-fit-1",
     "title": "Poisson Regression",
     "section": "Goodness-of-fit",
-    "text": "Goodness-of-fit\n\nGoal: Use the (residual) deviance to assess how much the predicted values differ from the observed values. Recall \\((\\text{deviance}) = \\sum_{i=1}^{n}(\\text{deviance residual})_i^2\\)\nIf the model sufficiently fits the data, then\n\n\\[\\text{deviance} \\sim \\chi^2_{df}\\]\nwhere \\(df\\) is the model’s residual degrees of freedom\n. . .\n\nQuestion: What is the probability of observing a deviance larger than the one we’ve observed, given this model sufficiently fits the data?\n\n. . .\n\\[P(\\chi^2_{df} &gt; \\text{ deviance})\\]"
+    "text": "Goodness-of-fit\n\nGoal: Use the (residual) deviance to assess how much the predicted values differ from the observed values. Recall \\((\\text{deviance}) = \\sum_{i=1}^{n}(\\text{deviance residual})_i^2\\)\nIf the model sufficiently fits the data, then\n\n. . .\n\\[\\text{deviance} \\sim \\chi^2_{df}\\]\nwhere \\(df\\) is the model’s residual degrees of freedom\n. . .\n\nQuestion: What is the probability of observing a deviance larger than the one we’ve observed, given this model sufficiently fits the data?\n\n. . .\n\\[P(\\chi^2_{df} &gt; \\text{ deviance})\\]"
   },
   {
     "objectID": "slides/04_poisson_ch4_o.html#model-3-goodness-of-fit-calculations",
@@ -4297,7 +4297,7 @@
     "href": "slides/04_poisson_ch4.html#poisson-regression-1",
     "title": "Poisson Regression",
     "section": "Poisson regression",
-    "text": "Poisson regression\nThe data: Household size in the Philippines\n\nThe data fHH1.csv come from the 2015 Family Income and Expenditure Survey conducted by the Philippine Statistics Authority.\nGoal: Understand the association between household size and various characteristics of the household\nResponse: - total: Number of people in the household other than the head\n\n\nPredictors: - location: Where the house is located - age: Age of the head of household - roof: Type of roof on the residence (proxy for wealth)\n\nOther variables: - numLT5: Number in the household under 5 years old"
+    "text": "Poisson regression\nThe data: Household size in the Philippines\nThe data fHH1.csv come from the 2015 Family Income and Expenditure Survey conducted by the Philippine Statistics Authority.\nGoal: Understand the association between household size and various characteristics of the household\nResponse:\n\ntotal: Number of people in the household other than the head\n\n\n\nPredictors:\n\nlocation: Where the house is located\nage: Age of the head of household\nroof: Type of roof on the residence (proxy for wealth)\n\n\nOther variables:\n\nnumLT5: Number in the household under 5 years old"
   },
   {
     "objectID": "slides/04_poisson_ch4.html#the-data",
@@ -4377,11 +4377,11 @@
     "text": "What are plausible values for the coefficient of age?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\nconf.low\nconf.high\n\n\n\n\n(Intercept)\n1.5499\n0.0503\n30.8290\n0\n1.4512\n1.6482\n\n\nage\n-0.0047\n0.0009\n-5.0258\n0\n-0.0065\n-0.0029\n\n\n\n\n\n95% confidence interval for the coefficient of age\n\\[\\hat{\\beta}_1 \\pm Z^{*}\\times SE(\\hat{\\beta}_1)\\] \\[-0.0047 \\pm 1.96 \\times 0.0009 = \\mathbf{(-.0065, -0.0029)}\\]\n\nQuestion: Interpret the interval in terms of the change in mean household size."
   },
   {
-    "objectID": "slides/04_poisson_ch4.html#which-can-best-help-us-determine-whether-model-1-is-a-good-fit",
-    "href": "slides/04_poisson_ch4.html#which-can-best-help-us-determine-whether-model-1-is-a-good-fit",
+    "objectID": "slides/04_poisson_ch4.html#which-can-help-determine-if-model-1-is-a-good-fit",
+    "href": "slides/04_poisson_ch4.html#which-can-help-determine-if-model-1-is-a-good-fit",
     "title": "Poisson Regression",
-    "section": "Which can best help us determine whether Model 1 is a good fit?",
-    "text": "Which can best help us determine whether Model 1 is a good fit?\n\nPlotsCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np1 &lt;- ggplot(data = hh_data, aes(x = age, y = total)) + \n  geom_point() + \n  labs(y = \"Total household size\", \n       title = \"Plot A\")\n\np2 &lt;- hh_data |&gt;\n  group_by(age) |&gt; \n  summarise(mean = mean(total)) |&gt;\n  ggplot(aes(x = age, y = mean))+ \n  geom_point() + \n  labs(y = \"Empirical mean household size\", \n       title = \"Plot B\")\n\np3 &lt;- hh_data |&gt;\n  group_by(age) |&gt; \n  summarise(log_mean = log(mean(total))) |&gt;\n  ggplot(aes(x = age, y = log_mean)) + \n  geom_point() + \n  labs(y = \"Log empirical mean household size\", \n       title = \"Plot C\")\n\np1 + p2 + p3 + plot_annotation(tag_levels = 'A')"
+    "section": "Which can help determine if Model 1 is a good fit?",
+    "text": "Which can help determine if Model 1 is a good fit?\n\nPlotsCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\np1 &lt;- ggplot(data = hh_data, aes(x = age, y = total)) + \n  geom_point() + \n  labs(y = \"Total household size\", \n       title = \"Plot A\")\n\np2 &lt;- hh_data |&gt;\n  group_by(age) |&gt; \n  summarise(mean = mean(total)) |&gt;\n  ggplot(aes(x = age, y = mean))+ \n  geom_point() + \n  labs(y = \"Empirical mean household size\", \n       title = \"Plot B\")\n\np3 &lt;- hh_data |&gt;\n  group_by(age) |&gt; \n  summarise(log_mean = log(mean(total))) |&gt;\n  ggplot(aes(x = age, y = log_mean)) + \n  geom_point() + \n  labs(y = \"Log empirical mean household size\", \n       title = \"Plot C\")\n\np1 + p2 + p3 + plot_annotation(tag_levels = 'A')"
   },
   {
     "objectID": "slides/04_poisson_ch4.html#model-2-add-a-quadratic-effect-for-age",
@@ -4430,7 +4430,7 @@
     "href": "slides/04_poisson_ch4.html#question",
     "title": "Poisson Regression",
     "section": "Question",
-    "text": "Question\nWhich of the following are reliable ways to determine if location should be added to the model?\n\n\nDrop-in-deviance test\nUse the p-value for each coefficient\nLikelihood ratio test\nNested F Test\nBIC"
+    "text": "Question\nWhich of the following are reliable ways to determine if location should be added to the model?\n\nDrop-in-deviance test\nUse the p-value for each coefficient\nLikelihood ratio test\nNested F Test\nBIC"
   },
   {
     "objectID": "slides/04_poisson_ch4.html#add-location-to-the-model-1",
@@ -4472,7 +4472,7 @@
     "href": "slides/04_poisson_ch4.html#goodness-of-fit-1",
     "title": "Poisson Regression",
     "section": "Goodness-of-fit",
-    "text": "Goodness-of-fit\n\nGoal: Use the (residual) deviance to assess how much the predicted values differ from the observed values. Recall \\((\\text{deviance}) = \\sum_{i=1}^{n}(\\text{deviance residual})_i^2\\)\nIf the model sufficiently fits the data, then\n\n\\[\\text{deviance} \\sim \\chi^2_{df}\\]\nwhere \\(df\\) is the model’s residual degrees of freedom\n\n\nQuestion: What is the probability of observing a deviance larger than the one we’ve observed, given this model sufficiently fits the data?\n\n\n\n\\[P(\\chi^2_{df} &gt; \\text{ deviance})\\]"
+    "text": "Goodness-of-fit\n\nGoal: Use the (residual) deviance to assess how much the predicted values differ from the observed values. Recall \\((\\text{deviance}) = \\sum_{i=1}^{n}(\\text{deviance residual})_i^2\\)\nIf the model sufficiently fits the data, then\n\n\n\\[\\text{deviance} \\sim \\chi^2_{df}\\]\nwhere \\(df\\) is the model’s residual degrees of freedom\n\n\n\nQuestion: What is the probability of observing a deviance larger than the one we’ve observed, given this model sufficiently fits the data?\n\n\n\n\\[P(\\chi^2_{df} &gt; \\text{ deviance})\\]"
   },
   {
     "objectID": "slides/04_poisson_ch4.html#model-3-goodness-of-fit-calculations",
