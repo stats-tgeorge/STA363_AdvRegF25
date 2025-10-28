@@ -88,6 +88,7 @@ $$f(y; \lambda) = \frac{\lambda^r}{\Gamma(r)} y^{r-1} e^{-\lambda y}$$
 
 Age, sex, and smoking history are all known to be associated with lung cancer incidence. Thus, researchers wished to determine after age, sex, socioeconomic status, and smoking have been controlled for, is an additional risk associated with birdkeeping? The data [Ramsey2002](https://bookdown.org/roback/bookdown-BeyondMLR/ch-logreg.html#ref-Holst1988) is found in `birdkeeping.csv`, and the variables are listed below. In addition, R code at the end of the problem can be used to input the data and create additional useful variables.
 
+
 -   `female` = sex (1 = Female, 0 = Male)
 -   `age` = age, in years
 -   `highstatus` = socioeconomic status (1 = High, 0 = Low), determined by the occupation of the household’s primary wage earner
