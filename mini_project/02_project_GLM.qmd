@@ -3,6 +3,7 @@ title: 'Mini Project 2'
 subtitle: 'GLMs'
 execute:
   eval: false
+categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 # Evening Before (Wednesday 9/4)
