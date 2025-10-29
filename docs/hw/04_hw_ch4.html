@@ -455,10 +455,12 @@ window.Quarto = {
   <li><a href="#exercise-8" id="toc-exercise-8" class="nav-link" data-scroll-target="#exercise-8">Exercise 8</a></li>
   <li><a href="#exercise-9" id="toc-exercise-9" class="nav-link" data-scroll-target="#exercise-9">Exercise 9</a></li>
   <li><a href="#exercise-10" id="toc-exercise-10" class="nav-link" data-scroll-target="#exercise-10">Exercise 10</a></li>
-  </ul></li>
   <li><a href="#exercise-11" id="toc-exercise-11" class="nav-link" data-scroll-target="#exercise-11">Exercise 11</a></li>
-  <li><a href="#exercise-12" id="toc-exercise-12" class="nav-link" data-scroll-target="#exercise-12">Exercise 12</a></li>
+  </ul></li>
+  <li><a href="#exercise-12" id="toc-exercise-12" class="nav-link" data-scroll-target="#exercise-12">Exercise 12</a>
+  <ul class="collapse">
   <li><a href="#exercise-13" id="toc-exercise-13" class="nav-link" data-scroll-target="#exercise-13">Exercise 13</a></li>
+  </ul></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
 </nav>
@@ -617,10 +619,9 @@ window.Quarto = {
 </ol></li>
 </ol>
 </section>
-</section>
-<section id="exercise-11" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-11">Exercise 11</h2>
-<ol type="1">
+<section id="exercise-11" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-11">Exercise 11</h3>
+<ol start="11" type="1">
 <li><p>(C15) <strong>Dating online.</strong> Researchers are interested in the number of dates respondents arranged online and whether the rates differ by age group. Questions which elicit responses similar to this can be found in the Pew Survey concerning dating online and relationships <span class="citation" data-cites="Duggan2013">[@Duggan2013]</span>. Each survey respondent was asked how many dates they have arranged online in the past 3 months as well as the typical amount of time, <span class="math inline">\(t\)</span>, in hours, they spend online weekly. Some rows of data appear in Table 1.</p>
 <ul>
 <li>Identify the response, predictor, and offset in this context. Does using an offset make sense?</li>
@@ -665,9 +666,10 @@ window.Quarto = {
 </div>
 </div>
 </section>
+</section>
 <section id="exercise-12" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-12">Exercise 12</h2>
-<ol start="2" type="1">
+<ol start="12" type="1">
 <li><p>(C16) <strong>Poisson approximation: rare events.</strong> For rare diseases, the probability of a case occurring, <span class="math inline">\(p\)</span>, in a very large population, <span class="math inline">\(n\)</span>, is small. With a small <span class="math inline">\(p\)</span> and large <span class="math inline">\(n\)</span>, the random variable <span class="math inline">\(Y\)</span>= the number of cases out of <span class="math inline">\(n\)</span> people can be approximated using a Poisson random variable with <span class="math inline">\(\lambda = np\)</span>. If the count of those with the disease is observed in several different populations independently of one another, the <span class="math inline">\(Y_i\)</span> represents the number of cases in the <span class="math inline">\(i^{th}\)</span> population and can be approximated using a Poisson random variable with <span class="math inline">\(\lambda_i=n_ip_i\)</span> where <span class="math inline">\(p_i\)</span> is the probability of a case for the <span class="math inline">\(i^{th}\)</span> population. Poisson regression can take into account the differences in the population sizes, <span class="math inline">\(n_i\)</span>, using as an offset log(<span class="math inline">\(n_i\)</span>) as well as differences in a population characteristic like <span class="math inline">\(x_i\)</span>. The coefficient of the offset is set at one; it is not estimated like the other coefficients. Thus the model statement has the form: <span class="math inline">\(log(\lambda_i) = \beta_0+\beta_1x_i + log(n_i)\)</span>, where <span class="math inline">\(Y_i  \sim\)</span> Poisson(<span class="math inline">\(\lambda_i = n_i p_i\)</span>). Note that <span class="math inline">\(\lambda_i\)</span> depends on <span class="math inline">\(x_i\)</span> which may differ for the different populations.</p>
 <p><span class="citation" data-cites="Scotto1974">@Scotto1974</span> wondered if skin cancer rates by age group differ by city. Based on their data in Table 2, identify and describe the following quantities which appear in the description of the Poisson approximation for rare events:</p>
 <ul>
@@ -734,10 +736,9 @@ window.Quarto = {
 </table>
 </div>
 </div>
-</section>
-<section id="exercise-13" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-13">Exercise 13</h2>
-<ol start="3" type="1">
+<section id="exercise-13" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-13">Exercise 13</h3>
+<ol start="13" type="1">
 <li>(G6) <strong>U.S. National Medical Expenditure Survey.</strong> The data set <code>NMES1988</code> in the <code>AER</code> package contains a sample of individuals over 65 who are covered by Medicare in order to assess the demand for health care through physician office visits, outpatient visits, ER visits, hospital stays, etc. The data can be accessed by installing and loading the <code>AER</code> package and then running <code>data(NMES1988)</code>. More background information and references about the <code>NMES1988</code> data can be found in help pages for the <code>AER</code> package.</li>
 </ol>
 <ol type="a">
@@ -753,6 +754,7 @@ window.Quarto = {
 <ol start="3" type="a">
 <li>Is there significant evidence that the ZIP model is an improvement over a simple Poisson regression model?</li>
 </ol>
+</section>
 </section>
 <section id="submission" class="level1">
 <h1>Submission</h1>
