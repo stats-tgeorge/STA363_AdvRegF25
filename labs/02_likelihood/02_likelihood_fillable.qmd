@@ -1,8 +1,6 @@
 ---
 title: 'Chapter 2 - Likelihoods'
 subtitle: 'Does having boys or girls run in the family? '
-editor: visual
-categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Questions
@@ -24,10 +22,10 @@ b)  Conducting a numerical search in R for the largest log-likelihood between 0 
 
 #### Model 2 – Sex Conditional Model. The probability of having a boy depends on whether you’ve had boys previously, so Model 2 will have three parameters:
 
-- probability of a boy when previously have had an equal number of boys and girls (neutral)
+-   probability of a boy when previously have had an equal number of boys and girls (neutral)
 
-- probability of a boy when previously have had more boys than girls (boy bias)
+-   probability of a boy when previously have had more boys than girls (boy bias)
 
-- probability of a boy when previously have had more girls than boys (girl bias)
+-   probability of a boy when previously have had more girls than boys (girl bias)
 
 3.  Write out the likelihood function given Model 2 for the small set of data in (1). \[You could also try BGG, GGB, BBB just for fun.\]
