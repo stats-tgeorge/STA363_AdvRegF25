@@ -1,7 +1,6 @@
 ---
 title: "Chapter 8 - Multilevel Models"
 subtitle: "Music Performance Joy"
-categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Lab Setup
@@ -9,6 +8,7 @@ categories: ["⚠️ Warning: Page Under Revision"]
 1) Copy the project lab folder located at *Home -> STA363_inst_files-> labs*. If you check the box next to the folder name, then click the small gear icon you can "copy to" and put a copy of the folder in your newly created folder. 
 2) Now, click *File-> Open Project* and navigate to the project file in the folder you just copied. 
 3) You can place your responses in the file *qmd* file included. 
+
 
 ## Introduction
 
@@ -46,7 +46,7 @@ To begin, run the following models:
 
 1. Perform an exploratory data analysis by comparing positive affect (happiness) to Level One and Level Two covariates using appropriate graphs. Comment on interesting trends, supporting your comments with appropriate summary statistics.
 
-2. Report estimated fixed effects and variance components from Model A, using proper notation from this chapter (no interpretations required). Also report and interpret an intraclass correlation coefficient.
+2. Report estimated fixed effects and variance components from Model A, using proper notation from this chapter (no interpretations required). Also report and interpret an *intraclass* correlation coefficient.
 
 3. Report estimated fixed effects and variance components from Model B, using proper notation from this chapter. Interpret your MLE estimates for $\hat{\alpha}_{0}$ (the intercept), and $\hat{\sigma}_{u}$ (the Level Two standard deviation for the intercept). Also report and interpret an appropriate pseudo R-squared value for model A vs model B. 
 
