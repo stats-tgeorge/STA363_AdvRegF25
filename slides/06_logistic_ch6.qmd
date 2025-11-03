@@ -604,75 +604,75 @@ $$\begin{aligned} &H_0: \text{ Model is a good fit} \\
 
 
 
-# Predicting emergency department wait and treatment times 
+<!-- # Predicting emergency department wait and treatment times  -->
 
 
 
-## Predicting ED wait and treatment times {.smaller}
+<!-- ## Predicting ED wait and treatment times {.smaller} -->
 
-[Ataman and Sariyer (2021)](https://sakai.duke.edu/access/content/group/ec265469-bdb3-47a7-beb0-317956b6f86f/ataman-sariyer-2021.pdf) use ordinal logistic regression to predict patient wait and treatment times in an emergency department (ED).  The goal is to identify relevant factors that can be used to inform recommendations for reducing wait and treatment times, thus improving the quality of care in the ED. 
+<!-- [Ataman and Sariyer (2021)](https://sakai.duke.edu/access/content/group/ec265469-bdb3-47a7-beb0-317956b6f86f/ataman-sariyer-2021.pdf) use ordinal logistic regression to predict patient wait and treatment times in an emergency department (ED).  The goal is to identify relevant factors that can be used to inform recommendations for reducing wait and treatment times, thus improving the quality of care in the ED.  -->
 
-**Data**: Daily records for ED arrivals in August 2018 at a public hospital in Izmir, Turkey. 
+<!-- **Data**: Daily records for ED arrivals in August 2018 at a public hospital in Izmir, Turkey.  -->
 
-**Response variable**: Wait time, a categorical variable with three levels: 
-  - Patients who wait less than 10 minutes
-  - Patients whose waiting time is in the range of 10-60 minutes
-  - Patients who wait more than 60 minutes
-
-
-::: aside
-Ataman, M. G., & Sarıyer, G. (2021). Predicting waiting and treatment times in emergency departments using ordinal logistic regression models. The American Journal of Emergency Medicine, 46, 45-50.
-:::
+<!-- **Response variable**: Wait time, a categorical variable with three levels:  -->
+<!--   - Patients who wait less than 10 minutes -->
+<!--   - Patients whose waiting time is in the range of 10-60 minutes -->
+<!--   - Patients who wait more than 60 minutes -->
 
 
-
-## Ordinal logistic regression {.smaller}
-
-Let $Y$ be an ordinal response variable that takes levels $1, 2, \ldots, J$ with associated probabilities $p_1, p_2, \ldots, p_J$. 
-
-The **proportional odds model** can be written as the following:
-
-$$\begin{aligned}&\log\Big(\frac{P(Y\leq 1)}{P(Y > 1)}\Big) = \beta_{01} + \beta_1x_1 + \dots +  \beta_px_p \\
-& \log\Big(\frac{P(Y\leq 2)}{P(Y > 2)}\Big) = \beta_{02} + \beta_1x_1 + \dots +  \beta_px_p \\
-& \dots \\
-& \log\Big(\frac{P(Y\leq J-1)}{P(Y > J-1)}\Big) = \beta_{0{J-1}} + \beta_1x_1 + \dots +  \beta_px_p\end{aligned}$$
-
-## Questions
-
-  - How is the proportional odds model similar to the multinomial logistic model? 
-  - How is it different?
-
-## Effect of arrival mode {.smaller}
-
-```{r echo = F, out.width = "100%"}
-
-knitr::include_graphics("img/oridinal-logistic-output.png")
-```
-
-. . .
-
-**Question**
-
-The variable `arrival mode` takes two categories: ambulance and walk-in. Describe the effect of arrival mode in this model. Note that the baseline level is "walk-in".
+<!-- ::: aside -->
+<!-- Ataman, M. G., & Sarıyer, G. (2021). Predicting waiting and treatment times in emergency departments using ordinal logistic regression models. The American Journal of Emergency Medicine, 46, 45-50. -->
+<!-- ::: -->
 
 
-## Effect of triage level {.smaller}
 
-. . .
+<!-- ## Ordinal logistic regression {.smaller} -->
 
-Consider the full output with the ordinal logistic models for wait and treatment times. 
+<!-- Let $Y$ be an ordinal response variable that takes levels $1, 2, \ldots, J$ with associated probabilities $p_1, p_2, \ldots, p_J$.  -->
+
+<!-- The **proportional odds model** can be written as the following: -->
+
+<!-- $$\begin{aligned}&\log\Big(\frac{P(Y\leq 1)}{P(Y > 1)}\Big) = \beta_{01} + \beta_1x_1 + \dots +  \beta_px_p \\ -->
+<!-- & \log\Big(\frac{P(Y\leq 2)}{P(Y > 2)}\Big) = \beta_{02} + \beta_1x_1 + \dots +  \beta_px_p \\ -->
+<!-- & \dots \\ -->
+<!-- & \log\Big(\frac{P(Y\leq J-1)}{P(Y > J-1)}\Big) = \beta_{0{J-1}} + \beta_1x_1 + \dots +  \beta_px_p\end{aligned}$$ -->
+
+<!-- ## Questions -->
+
+<!--   - How is the proportional odds model similar to the multinomial logistic model?  -->
+<!--   - How is it different? -->
+
+<!-- ## Effect of arrival mode {.smaller} -->
+
+<!-- ```{r echo = F, out.width = "100%"} -->
+
+<!-- knitr::include_graphics("img/oridinal-logistic-output.png") -->
+<!-- ``` -->
+
+<!-- . . . -->
+
+<!-- **Question** -->
+
+<!-- The variable `arrival mode` takes two categories: ambulance and walk-in. Describe the effect of arrival mode in this model. Note that the baseline level is "walk-in". -->
 
 
-```{r echo = F, out.width = "90%"}
-knitr::include_graphics("img/ordinal-model-full.png")
-```
+<!-- ## Effect of triage level {.smaller} -->
+
+<!-- . . . -->
+
+<!-- Consider the full output with the ordinal logistic models for wait and treatment times.  -->
 
 
-- **Question**
+<!-- ```{r echo = F, out.width = "90%"} -->
+<!-- knitr::include_graphics("img/ordinal-model-full.png") -->
+<!-- ``` -->
 
-. . .
 
-Use the results from both models to describe the effect of triage level (red = urgent, green = non-urgent) on the wait and treatment times in the ED. Note that "red" is the baseline level. Is this what you expected? 
+<!-- - **Question** -->
+
+<!-- . . . -->
+
+<!-- Use the results from both models to describe the effect of triage level (red = urgent, green = non-urgent) on the wait and treatment times in the ED. Note that "red" is the baseline level. Is this what you expected?  -->
 
 
 
