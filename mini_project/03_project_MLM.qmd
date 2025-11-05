@@ -3,39 +3,39 @@ title: 'Mini Project 3'
 subtitle: 'Multilevel Models'
 execute:
   eval: false
-categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
-# Evening Before (Thursday 9/12)
+## Evening Before (Thursday 11/6)
 
--   Pick a partner.
+##### 1) Pick a partner.
 
--   Find an appropriate data set.
-    -   Multilevel data may be harder to find.
-    -   The data you choose should have a few predictors that may be useful when modeling (ideally at least 1 quantitative and 1 categorical).
-    -   In this project, you can choose the data from the book between Chapter 9 Guided number 2 or any of Chapter 9's Open Ended exercises. You are not going to answer their questions but use the questions data to answer your own questions.
-    -   I do ask that different groups choose different datasets. Choose a few options.
+##### 2) Find an appropriate data set.
+
+-   Multilevel data may be harder to find.
+-   The data you choose should have a few predictors that may be useful when modeling (ideally at least 1 quantitative and 1 categorical).
+-   In this project, you can choose the data from the book between Chapter 9 Guided number 2 or any of Chapter 9's Open Ended exercises. You are not going to answer their questions but use the questions data to answer your own questions.
 
 **Data Options: Check out Data Links on the [Useful Links](../course-links.qmd) part of the course website. *TidyTuesday* has quickly accessible data.**
 
--   Write out the anticipated cleaning and/or feature engineering steps you will need to take. Some examples:
-    -   Creating simplified categorical variables or transforming a continuous variable into categorical.
-    -   Aggregating data
-    -   Converting date columns
-    -   etc.
+###### 3) Write out the anticipated cleaning and/or feature engineering steps you will need to take. Some examples:
 
--   Setup your R Project(s) on the server.
+-   Creating simplified categorical variables or transforming a continuous variable into categorical.
+-   Aggregating data
+-   Converting date columns
+-   etc.
 
--   Read your data into R. This likely will require you to download the data to your computer and upload the data the server.
+##### 4) Setup your R Project(s) on the server.
 
-# Project Day
+##### 5) Read your data into R. This likely will require you to download the data to your computer and upload the data the server.
+
+## Project Day
 
 ## Timing
 
 This project will be in a *workshop* style. The intention is for you to start and finish by the end of class time. We will follow a timeline:
 
 | Task                                       | Timing                                 |
-|--------------------------------------|----------------------------------|
+|--------------------------------------------|----------------------------------------|
 | Clean Data                                 | 9:00 am - 9:30 am                      |
 | Perform EDA                                | 9:30 am - 10:30 am                     |
 | Fit, Assess, and Compare Regression Models | 10:30 am - 11:00 am, 1:00 pm - 2:00 pm |
@@ -43,9 +43,9 @@ This project will be in a *workshop* style. The intention is for you to start an
 | Present your findings                      | 2:20 pm - 2:40 pm                      |
 | Submit your Final Report                   | Submit HTML Sunday 9/8 at 11:59 pm     |
 
-### Grading
+## Grading
 
-Each Mini Project is worth 50 points (Labs are 10 points each).
+Each Mini Project is worth 50 points. The following rubric applies to the combination of your report and presentation. 
 
 | Category                                                                                                                                                                                                                                     | Points |
 |-------------------------------------------------------|-----------------|
@@ -57,7 +57,7 @@ Each Mini Project is worth 50 points (Labs are 10 points each).
 | The presentation is concise, describes the data, highlights key parts of the EDA, describes minimally the final model, gives at least 1 interpretation in the context of a coefficient, and discusses limitations and potential future work. | 5      |
 | The report is well written, with correct spelling and grammar. The used code is included either inline or in an appendix at the end.                                                                                                         | 5      |
 
-### Submission
+## Submission
 
 Add format part of your final report document and then re-render:
 
@@ -73,7 +73,7 @@ format:
 ---
 ```
 
-When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+When you are finished with your homework, render the final document. Once rendered, you can download your file by:
 
 -   Finding the .html file in your File pane (on the bottom right of the screen)
 -   Click the check box next to the file

@@ -8,7 +8,8 @@ format:
   html:
     output-file: "09_longitudinal_ch9_o.html"
 logo: "../img/favicon.png"
-categories: ["⚠️ Warning: Page Under Revision"]
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Setup
@@ -39,7 +40,7 @@ library(broom.mixed)
 - Conduct inference for fixed effects
 
 
-## Data: Charter schools in MN{.smaller}
+## Data: Charter schools in MN {.smaller}
 
 The data set [`charter-long.csv`](data/charter-long.csv) contains standardized test scores and demographic information for schools in Minneapolis, MN from 2008 to 2010. The data were collected by the Minnesota Department of Education. Understanding the effectiveness of charter schools is of particular interest, since they often incorporate unique methods of instruction and learning that differ from public schools.
 
@@ -58,7 +59,7 @@ charter <- read_csv("data/charter-long.csv")
 
 charter |>
   select(schoolName, year08, urban, charter, schPctfree, MathAvgScore) |>
-  slice(1:3, 1852:1854) |>
+  slice(1:2, 1852:1853) |>
   kable(digits = 3)
 ```
 

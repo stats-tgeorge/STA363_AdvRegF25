@@ -160,7 +160,7 @@ amb.mod3 <- lmer(ambiguity ~ democrat + incumbent +
 
 # Submission
 
-When you are finished with your homework, be render the final document. Once rendered, you can download your file by:
+When you are finished with your homework, render the final document. Once rendered, you can download your file by:
 
 -   Finding the .html file in your File pane (on the bottom right of the screen)
 -   Click the check box next to the file
