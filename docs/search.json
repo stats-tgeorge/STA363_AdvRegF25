@@ -2406,7 +2406,7 @@
     "href": "index.html",
     "title": "Advanced Regression Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nSlides\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n20 Oct\nSyllabus, Chapter 1 - Review MLR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n21 Oct\nCh1 - MLR & Ch2 - Likelihoods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n22 Oct\nCh2 - Likelihoods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n23 Oct\nCh3 - Distributions & Ch4 - Poisson Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n24 Oct\nCh4 - Poisson Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n27 Oct\nCh 4 - Poisson Reg. & Ch 5 - GLMs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n28 Oct\nPoisson Mini Project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n29 Oct\nCh 6 - Logistics Regression (no afternoon class)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n30 Oct\nGLM/Logistic Mini Project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n31 Oct\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n3 Nov\nCh 7 - Correlated Data & Ch 8 - Multilevel Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n4 Nov\nChapter 8 - Multilevel Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n5 Nov\nChapter 8 - Multilevel Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n6 Nov\nChapter 9 - Two-Level Longitudinal Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n7 Nov\nMultilevel Model Practice - Mini Project 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n10 Nov\nPolynomial Regression, Splines, and GAMs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n11 Nov\nPolynomial Regression, Splines, and GAMs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n12 Nov\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nSlides\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n20 Oct\nSyllabus, Chapter 1 - Review MLR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n21 Oct\nCh1 - MLR & Ch2 - Likelihoods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n22 Oct\nCh2 - Likelihoods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n23 Oct\nCh3 - Distributions & Ch4 - Poisson Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n24 Oct\nCh4 - Poisson Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n27 Oct\nCh 4 - Poisson Reg. & Ch 5 - GLMs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n28 Oct\nPoisson Mini Project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n29 Oct\nCh 6 - Logistics Regression (no afternoon class)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n30 Oct\nGLM/Logistic Mini Project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n31 Oct\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n3 Nov\nCh 7 - Correlated Data & Ch 8 - Multilevel Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n4 Nov\nChapter 8 - Multilevel Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n5 Nov\nChapter 8 - Multilevel Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n6 Nov\nChapter 8 - Multilevel Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n7 Nov\nChapter 9 - Two-Level Longitudinal Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n10 Nov\nPolynomial Regression, Splines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n11 Nov\nPolynomial Regression, Splines (half day)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n12 Nov\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"
@@ -3023,14 +3023,14 @@
     "href": "labs/06_non_linear/06_wage.html#packages",
     "title": "Moving Beyond Linearity - Chapter 7 (ISLR)",
     "section": "Packages",
-    "text": "Packages\nIn this lab we will work with three packages: tidyverse which is a collection of packages for doing data analysis in a “tidy” way, tidymodels for statistical model coefficients, and splines for our splines models.\nIf you’d like to run your code in the Console as well you’ll also need to load the packages there. To do so, run the following in the console.\n\nlibrary(tidyverse) \nlibrary(tidymodels)\nlibrary(splines)"
+    "text": "Packages\nIn this lab, we will work with three packages: tidyverse, which is a collection of packages for data analysis in a “tidy” way; tidymodels for statistical model coefficients; and splines for our spline models.\nIf you’d like to run your code in the Console as well, you’ll need to load the packages there as well. To do so, run the following in the console.\n\nlibrary(tidyverse) \nlibrary(tidymodels)\nlibrary(splines)"
   },
   {
     "objectID": "labs/06_non_linear/06_wage.html#data",
     "href": "labs/06_non_linear/06_wage.html#data",
     "title": "Moving Beyond Linearity - Chapter 7 (ISLR)",
     "section": "Data",
-    "text": "Data\nFor this lab, we are using wage data adapted from the ISLR package. This can be loaded in by running:\n\nload(\"data/wage.rda\")\n\nBelow is a data dictionary for this dataset:\n\n\n\n\n\n\n\nvariable\ndefinition\n\n\n\n\nyear\nYear that wage information was recorded\n\n\nage\nAge of worker\n\n\nmaritl\nA factor with levels 1. Never Married 2. Married 3. Widowed 4. Divorced and 5. Separated indicating marital status\n\n\nrace\nA factor with levels 1. White 2. Black 3. Asian and 4. Other indicating race\n\n\neducation\nA factor with levels 1. &lt; HS Grad 2. HS Grad 3. Some College 4. College Grad and 5. Advanced Degree indicating education level\n\n\nregion\nRegion of the country (mid-atlantic only)\n\n\njobclass\nA factor with levels 1. Industrial and 2. Information indicating type of job\n\n\nhealth\nA factor with levels 1. &lt;=Good and 2. &gt;=Very Good indicating health level of worker\n\n\nhealth_ins\nA factor with levels 1. Yes and 2. No indicating whether worker has health insurance\n\n\nlogwage\nLog of workers wage\n\n\nwage\nWorkers raw wage"
+    "text": "Data\nFor this lab, we are using wage data adapted from the ISLR package. This can be loaded in by running:\n\nload(here::here(\"labs/data/wage.rda\"))\n\nBelow is a data dictionary for this dataset:\n\n\n\n\n\n\n\nvariable\ndefinition\n\n\n\n\nyear\nYear that wage information was recorded\n\n\nage\nAge of worker\n\n\nmaritl\nA factor with levels 1. Never Married 2. Married 3. Widowed 4. Divorced and 5. Separated indicating marital status\n\n\nrace\nA factor with levels 1. White 2. Black 3. Asian and 4. Other indicating race\n\n\neducation\nA factor with levels 1. &lt; HS Grad 2. HS Grad 3. Some College 4. College Grad and 5. Advanced Degree indicating education level\n\n\nregion\nRegion of the country (mid-atlantic only)\n\n\njobclass\nA factor with levels 1. Industrial and 2. Information indicating type of job\n\n\nhealth\nA factor with levels 1. &lt;=Good and 2. &gt;=Very Good indicating health level of worker\n\n\nhealth_ins\nA factor with levels 1. Yes and 2. No indicating whether worker has health insurance\n\n\nlogwage\nLog of workers wage\n\n\nwage\nWorkers raw wage\n\n\n\n\nPolynomial Regression\nPolynomial regression can be thought of as doing polynomial expansion on a variable and passing that expansion into a linear regression model. We will be very explicit in this formulation in this chapter.\nThe following step will take age and replace it with the variables age, age^2, age^3, and age^4 since we set degree = 4 (this is a lie, keep reading).\n\nmodel1 &lt;- lm(wage ~ poly(age , 4), data = wage)\ncoef(summary(model1))\n\n                Estimate Std. Error    t value     Pr(&gt;|t|)\n(Intercept)    111.70361  0.7287409 153.283015 0.000000e+00\npoly(age, 4)1  447.06785 39.9147851  11.200558 1.484604e-28\npoly(age, 4)2 -478.31581 39.9147851 -11.983424 2.355831e-32\npoly(age, 4)3  125.52169 39.9147851   3.144742 1.678622e-03\npoly(age, 4)4  -77.91118 39.9147851  -1.951938 5.103865e-02\n\n\nThough we expect age, age^2, age^3, and age^4, the function it returns variables that are a basis of orthogonal polynomials, which means that each of the columns is a linear combination of the variables age, age^2, age^3, and age^4. We can see this by using poly() directly with raw = FALSE since it is the default\n\npoly(1:6, degree = 4, raw = FALSE)\n\n              1          2          3          4\n[1,] -0.5976143  0.5455447 -0.3726780  0.1889822\n[2,] -0.3585686 -0.1091089  0.5217492 -0.5669467\n[3,] -0.1195229 -0.4364358  0.2981424  0.3779645\n[4,]  0.1195229 -0.4364358 -0.2981424  0.3779645\n[5,]  0.3585686 -0.1091089 -0.5217492 -0.5669467\n[6,]  0.5976143  0.5455447  0.3726780  0.1889822\nattr(,\"coefs\")\nattr(,\"coefs\")$alpha\n[1] 3.5 3.5 3.5 3.5\n\nattr(,\"coefs\")$norm2\n[1]  1.00000  6.00000 17.50000 37.33333 64.80000 82.28571\n\nattr(,\"degree\")\n[1] 1 2 3 4\nattr(,\"class\")\n[1] \"poly\"   \"matrix\"\n\n\nThese variables don’t have the format we assumed. But this is still a well-reasoned transformation. We can get the raw polynomial transformation by setting raw = TRUE\n\npoly(1:6, degree = 4, raw = TRUE)\n\n     1  2   3    4\n[1,] 1  1   1    1\n[2,] 2  4   8   16\n[3,] 3  9  27   81\n[4,] 4 16  64  256\n[5,] 5 25 125  625\n[6,] 6 36 216 1296\nattr(,\"degree\")\n[1] 1 2 3 4\nattr(,\"class\")\n[1] \"poly\"   \"matrix\"\n\n\nThese transformations align with what we would expect. It is still recommended to stick with the default of raw = FALSE unless you have a reason not to do that."
   },
   {
     "objectID": "mini_project/02_project_GLM.html",
@@ -5942,14 +5942,7 @@
     "href": "slides/10_non_linear_ch7_o.html#polynomials",
     "title": "Moving Beyond Linearity",
     "section": "Polynomials",
-    "text": "Polynomials\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\n. . .\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(co, aes(age, pop)) + \n  geom_point() + \n  geom_smooth(formula = y ~ poly(x, 4), method = \"lm\")\n\nThis is data from the Columbia World Fertility Survey (1975-76) to examine household compositions"
-  },
-  {
-    "objectID": "slides/10_non_linear_ch7_o.html#polynomials-1",
-    "href": "slides/10_non_linear_ch7_o.html#polynomials-1",
-    "title": "Moving Beyond Linearity",
-    "section": "Polynomials",
-    "text": "Polynomials\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\nFit here with a 4th degree polynomial\n\n\n\n\nggplot(co, aes(age, pop)) + \n  geom_point() + \n  geom_smooth(formula = y ~ poly(x, 4), method = \"lm\")"
+    "text": "Polynomials\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\n. . .\n\nThis is data from the Columbia World Fertility Survey (1975-76) to examine household compositions\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(co, aes(age, pop)) + \n  geom_point() + \n  geom_smooth(formula = y ~ poly(x, 4), method = \"lm\")"
   },
   {
     "objectID": "slides/10_non_linear_ch7_o.html#how-is-it-done",
@@ -5984,14 +5977,14 @@
     "href": "slides/10_non_linear_ch7_o.html#choosing-d",
     "title": "Moving Beyond Linearity",
     "section": "Choosing \\(d\\)",
-    "text": "Choosing \\(d\\)\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\n\nEither:\n\n\nPre-specify \\(d\\) (before looking 👀 at your data!)\nUse cross-validation to pick \\(d\\) (take statistical learning!)\n\n\n\nWhy before looking?"
+    "text": "Choosing \\(d\\)\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\n\nEither:\n\n\nPre-specify \\(d\\) (before looking 👀 at your data!)\nUse cross-validation to pick \\(d\\) (take statistical learning!)\n\n\n. . .\n\nWhy before looking?"
   },
   {
     "objectID": "slides/10_non_linear_ch7_o.html#polynomial-regression-2",
     "href": "slides/10_non_linear_ch7_o.html#polynomial-regression-2",
     "title": "Moving Beyond Linearity",
     "section": "Polynomial Regression",
-    "text": "Polynomial Regression\nPolynomials have notoriously bad tail behavior (so they can be bad for extrapolation)\n\nWhat does this mean?"
+    "text": "Polynomial Regression\nPolynomials have notoriously bad tail behavior (so they can be bad for extrapolation)\n. . .\n\nWhat does this mean?"
   },
   {
     "objectID": "slides/10_non_linear_ch7_o.html#step-functions",
@@ -6012,7 +6005,7 @@
     "href": "slides/10_non_linear_ch7_o.html#step-functions-2",
     "title": "Moving Beyond Linearity",
     "section": "Step functions",
-    "text": "Step functions\n\\[C_1(X) = I(X &lt; 35), C_2(X) = I(35\\leq X&lt;65), C_3(X) = I(X \\geq 65)\\]\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmod &lt;- lm(pop ~ I(age &lt; 35) + I(age &gt;=35 & age &lt; 65) + I(age &gt;= 65), data = co)\np &lt;- predict(mod)\nggplot(co, aes(x = age, y = pop)) +\n  geom_point() +\n  geom_line(aes(x = age, y = p), color = \"blue\")\n\n\n\n\n\nWhat is the predicted value when \\(age = 25\\)?"
+    "text": "Step functions\n\\[C_1(X) = I(X &lt; 35), C_2(X) = I(35\\leq X&lt;65), C_3(X) = I(X \\geq 65)\\]\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmod &lt;- lm(pop ~ I(age &lt; 35) + I(age &gt;=35 & age &lt; 65) + I(age &gt;= 65), data = co)\np &lt;- predict(mod)\nggplot(co, aes(x = age, y = pop)) +\n  geom_point() +\n  geom_line(aes(x = age, y = p), color = \"blue\")\n\n\n\n\n. . .\n\nWhat is the predicted value when \\(age = 25\\)?"
   },
   {
     "objectID": "slides/10_non_linear_ch7_o.html#step-functions-3",
@@ -6103,7 +6096,7 @@
     "href": "slides/10_non_linear_ch7_o.html#cubic-spline",
     "title": "Moving Beyond Linearity",
     "section": "Cubic Spline",
-    "text": "Cubic Spline\n\n\n\n\n\nx\n\n\n\n\n4\n\n\n15\n\n\n25\n\n\n37\n\n\n49\n\n\n66\n\n\n70\n\n\n80\n\n\n\n\n\n➡️\n\n\n\nExampleCode\n\n\n\n\n\n\n\nb1\nb2\nb3\nb4\nb5\n\n\n\n\n4\n16\n64\n0\n0\n\n\n15\n225\n3375\n0\n0\n\n\n25\n625\n15625\n0\n0\n\n\n37\n1369\n50653\n8\n0\n\n\n49\n2401\n117649\n2744\n0\n\n\n66\n4356\n287496\n29791\n1\n\n\n70\n4900\n343000\n42875\n125\n\n\n80\n6400\n512000\n91125\n3375\n\n\n\n\n\n\n\n\nd |&gt;\n  mutate(b2 = b1^2,\n         b3 = b1^3,\n         b4 = ifelse(b1 &gt; 35, (b1 - 35)^3, 0),\n         b5 = ifelse(b1 &gt; 65, (b1 - 65)^3, 0)\n  ) -&gt; d\nd |&gt;\n  select(-y) |&gt;\n  knitr::kable()"
+    "text": "Cubic Spline\n\nExampleCode\n\n\n\n\n\n\n\nx\n\n\n\n\n4\n\n\n15\n\n\n25\n\n\n37\n\n\n49\n\n\n66\n\n\n70\n\n\n80\n\n\n\n\n\n➡️\n\n\n\n\n\n\n\nb1\nb2\nb3\nb4\nb5\n\n\n\n\n4\n16\n64\n0\n0\n\n\n15\n225\n3375\n0\n0\n\n\n25\n625\n15625\n0\n0\n\n\n37\n1369\n50653\n8\n0\n\n\n49\n2401\n117649\n2744\n0\n\n\n66\n4356\n287496\n29791\n1\n\n\n70\n4900\n343000\n42875\n125\n\n\n80\n6400\n512000\n91125\n3375\n\n\n\n\n\n\n\n\n\n\nd |&gt;\n  mutate(b2 = b1^2,\n         b3 = b1^3,\n         b4 = ifelse(b1 &gt; 35, (b1 - 35)^3, 0),\n         b5 = ifelse(b1 &gt; 65, (b1 - 65)^3, 0)\n  ) -&gt; d\nd |&gt;\n  select(-y) |&gt;\n  knitr::kable()"
   },
   {
     "objectID": "slides/10_non_linear_ch7_o.html#cubic-spline-1",
@@ -6201,14 +6194,7 @@
     "href": "slides/10_non_linear_ch7.html#polynomials",
     "title": "Moving Beyond Linearity",
     "section": "Polynomials",
-    "text": "Polynomials\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(co, aes(age, pop)) + \n  geom_point() + \n  geom_smooth(formula = y ~ poly(x, 4), method = \"lm\")\n\nThis is data from the Columbia World Fertility Survey (1975-76) to examine household compositions"
-  },
-  {
-    "objectID": "slides/10_non_linear_ch7.html#polynomials-1",
-    "href": "slides/10_non_linear_ch7.html#polynomials-1",
-    "title": "Moving Beyond Linearity",
-    "section": "Polynomials",
-    "text": "Polynomials\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\nFit here with a 4th degree polynomial\n\n\n\n\nggplot(co, aes(age, pop)) + \n  geom_point() + \n  geom_smooth(formula = y ~ poly(x, 4), method = \"lm\")"
+    "text": "Polynomials\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(co, aes(age, pop)) + \n  geom_point() + \n  geom_smooth(formula = y ~ poly(x, 4), method = \"lm\")\n\n\n\n\n\n\n\nThis is data from the Columbia World Fertility Survey (1975-76) to examine household compositions"
   },
   {
     "objectID": "slides/10_non_linear_ch7.html#how-is-it-done",
@@ -6243,14 +6229,14 @@
     "href": "slides/10_non_linear_ch7.html#choosing-d",
     "title": "Moving Beyond Linearity",
     "section": "Choosing \\(d\\)",
-    "text": "Choosing \\(d\\)\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\nEither:\n\nPre-specify \\(d\\) (before looking 👀 at your data!)\nUse cross-validation to pick \\(d\\) (take statistical learning!)\n\n\nWhy before looking?"
+    "text": "Choosing \\(d\\)\n\\[y_i = \\beta_0 + \\beta_1x_i + \\beta_2x_i^2+\\beta_3x_i^3 \\dots + \\beta_dx_i^d+\\epsilon_i\\]\nEither:\n\nPre-specify \\(d\\) (before looking 👀 at your data!)\nUse cross-validation to pick \\(d\\) (take statistical learning!)\n\n. . .\n\nWhy before looking?"
   },
   {
     "objectID": "slides/10_non_linear_ch7.html#polynomial-regression-2",
     "href": "slides/10_non_linear_ch7.html#polynomial-regression-2",
     "title": "Moving Beyond Linearity",
     "section": "Polynomial Regression",
-    "text": "Polynomial Regression\nPolynomials have notoriously bad tail behavior (so they can be bad for extrapolation)\n\nWhat does this mean?"
+    "text": "Polynomial Regression\nPolynomials have notoriously bad tail behavior (so they can be bad for extrapolation)\n\n\nWhat does this mean?"
   },
   {
     "objectID": "slides/10_non_linear_ch7.html#step-functions",
@@ -6271,7 +6257,7 @@
     "href": "slides/10_non_linear_ch7.html#step-functions-2",
     "title": "Moving Beyond Linearity",
     "section": "Step functions",
-    "text": "Step functions\n\\[C_1(X) = I(X &lt; 35), C_2(X) = I(35\\leq X&lt;65), C_3(X) = I(X \\geq 65)\\]\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmod &lt;- lm(pop ~ I(age &lt; 35) + I(age &gt;=35 & age &lt; 65) + I(age &gt;= 65), data = co)\np &lt;- predict(mod)\nggplot(co, aes(x = age, y = pop)) +\n  geom_point() +\n  geom_line(aes(x = age, y = p), color = \"blue\")\n\n\n\n\n\nWhat is the predicted value when \\(age = 25\\)?"
+    "text": "Step functions\n\\[C_1(X) = I(X &lt; 35), C_2(X) = I(35\\leq X&lt;65), C_3(X) = I(X \\geq 65)\\]\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmod &lt;- lm(pop ~ I(age &lt; 35) + I(age &gt;=35 & age &lt; 65) + I(age &gt;= 65), data = co)\np &lt;- predict(mod)\nggplot(co, aes(x = age, y = pop)) +\n  geom_point() +\n  geom_line(aes(x = age, y = p), color = \"blue\")\n\n\n\n\n\n\nWhat is the predicted value when \\(age = 25\\)?"
   },
   {
     "objectID": "slides/10_non_linear_ch7.html#step-functions-3",
@@ -6362,7 +6348,7 @@
     "href": "slides/10_non_linear_ch7.html#cubic-spline",
     "title": "Moving Beyond Linearity",
     "section": "Cubic Spline",
-    "text": "Cubic Spline\n\n\n\n\n\nx\n\n\n\n\n4\n\n\n15\n\n\n25\n\n\n37\n\n\n49\n\n\n66\n\n\n70\n\n\n80\n\n\n\n\n➡️\n\n\nExampleCode\n\n\n\n\n\n\n\nb1\nb2\nb3\nb4\nb5\n\n\n\n\n4\n16\n64\n0\n0\n\n\n15\n225\n3375\n0\n0\n\n\n25\n625\n15625\n0\n0\n\n\n37\n1369\n50653\n8\n0\n\n\n49\n2401\n117649\n2744\n0\n\n\n66\n4356\n287496\n29791\n1\n\n\n70\n4900\n343000\n42875\n125\n\n\n80\n6400\n512000\n91125\n3375\n\n\n\n\n\n\n\n\nd |&gt;\n  mutate(b2 = b1^2,\n         b3 = b1^3,\n         b4 = ifelse(b1 &gt; 35, (b1 - 35)^3, 0),\n         b5 = ifelse(b1 &gt; 65, (b1 - 65)^3, 0)\n  ) -&gt; d\nd |&gt;\n  select(-y) |&gt;\n  knitr::kable()"
+    "text": "Cubic Spline\n\nExampleCode\n\n\n\n\n\n\n\nx\n\n\n\n\n4\n\n\n15\n\n\n25\n\n\n37\n\n\n49\n\n\n66\n\n\n70\n\n\n80\n\n\n\n\n➡️\n\n\n\n\n\n\nb1\nb2\nb3\nb4\nb5\n\n\n\n\n4\n16\n64\n0\n0\n\n\n15\n225\n3375\n0\n0\n\n\n25\n625\n15625\n0\n0\n\n\n37\n1369\n50653\n8\n0\n\n\n49\n2401\n117649\n2744\n0\n\n\n66\n4356\n287496\n29791\n1\n\n\n70\n4900\n343000\n42875\n125\n\n\n80\n6400\n512000\n91125\n3375\n\n\n\n\n\n\n\n\n\nd |&gt;\n  mutate(b2 = b1^2,\n         b3 = b1^3,\n         b4 = ifelse(b1 &gt; 35, (b1 - 35)^3, 0),\n         b5 = ifelse(b1 &gt; 65, (b1 - 65)^3, 0)\n  ) -&gt; d\nd |&gt;\n  select(-y) |&gt;\n  knitr::kable()"
   },
   {
     "objectID": "slides/10_non_linear_ch7.html#cubic-spline-1",

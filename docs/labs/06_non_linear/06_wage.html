@@ -440,11 +440,14 @@ window.Quarto = {
   <ul>
   <li><a href="#lab-setup" id="toc-lab-setup" class="nav-link active" data-scroll-target="#lab-setup">Lab Setup</a></li>
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a>
   <ul class="collapse">
   <li><a href="#polynomial-regression" id="toc-polynomial-regression" class="nav-link" data-scroll-target="#polynomial-regression">Polynomial Regression</a></li>
+  </ul></li>
+  <li><a href="#polynomial-regression-exercises" id="toc-polynomial-regression-exercises" class="nav-link" data-scroll-target="#polynomial-regression-exercises">Polynomial Regression Exercises</a>
+  <ul class="collapse">
   <li><a href="#splines" id="toc-splines" class="nav-link" data-scroll-target="#splines">Splines</a></li>
+  <li><a href="#splines-exercises" id="toc-splines-exercises" class="nav-link" data-scroll-target="#splines-exercises">Splines Exercises</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -457,10 +460,7 @@ window.Quarto = {
 <div class="quarto-title">
 <h1 class="title">Moving Beyond Linearity - Chapter 7 (ISLR)</h1>
 <p class="subtitle lead">Wage Data</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">⚠️ Warning: Page Under Revision</div>
-  </div>
-  </div>
+</div>
 
 
 
@@ -486,8 +486,8 @@ window.Quarto = {
 </section>
 <section id="packages" class="level2">
 <h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<p>In this lab we will work with three packages: <code>tidyverse</code> which is a collection of packages for doing data analysis in a “tidy” way, <code>tidymodels</code> for statistical model coefficients, and <code>splines</code> for our splines models.</p>
-<p>If you’d like to run your code in the Console as well you’ll also need to load the packages there. To do so, run the following in the console.</p>
+<p>In this lab, we will work with three packages: <code>tidyverse</code>, which is a collection of packages for data analysis in a “tidy” way; <code>tidymodels</code> for statistical model coefficients; and <code>splines</code> for our spline models.</p>
+<p>If you’d like to run your code in the Console as well, you’ll need to load the packages there as well. To do so, run the following in the console.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
@@ -498,7 +498,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>For this lab, we are using <code>wage</code> data adapted from the <code>ISLR</code> package. This can be loaded in by running:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"data/wage.rda"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"labs/data/wage.rda"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Below is a data dictionary for this dataset:</p>
 <table class="caption-top table">
@@ -559,13 +559,6 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
-<ol type="1">
-<li><p>Explore the <code>wage</code> dataset. What are the variables? How many observations are there? Is there any missing data? If so how much? For simplicity in this particular lab, we are going to do <em>complete case analysis</em>. Create a new dataframe that is complete (only based on education, not <code>maritl</code> since we are not going to use that variable in this lab).</p></li>
-<li><p>For this lab, we are interested in predicting the variable <code>wage</code> from <code>age</code>, <code>health_ins</code>, <code>jobclass</code>, <code>education</code>, and <code>race</code>. Complete a brief univariate and bivariate EDA for each of these varibles and with the response.</p></li>
-</ol>
 <section id="polynomial-regression" class="level3">
 <h3 class="anchored" data-anchor-id="polynomial-regression">Polynomial Regression</h3>
 <p>Polynomial regression can be thought of as doing polynomial expansion on a variable and passing that expansion into a linear regression model. We will be very explicit in this formulation in this chapter.</p>
@@ -582,7 +575,7 @@ poly(age, 4)3  125.52169 39.9147851   3.144742 1.678622e-03
 poly(age, 4)4  -77.91118 39.9147851  -1.951938 5.103865e-02</code></pre>
 </div>
 </div>
-<p>Though we expect <code>age</code>, <code>age^2</code>, <code>age^3</code>, and <code>age^4</code>, what is happening is that it returns variables that are a basis of orthogonal polynomials, which means that each of the columns is a linear combination of the variables <code>age</code>, <code>age^2</code>, <code>age^3</code>, and <code>age^4</code>. We can see this by using <code>poly()</code> directly with <code>raw = FALSE</code> since it is the default</p>
+<p>Though we expect <code>age</code>, <code>age^2</code>, <code>age^3</code>, and <code>age^4</code>, the function it returns variables that are a basis of orthogonal polynomials, which means that each of the columns is a linear combination of the variables <code>age</code>, <code>age^2</code>, <code>age^3</code>, and <code>age^4</code>. We can see this by using <code>poly()</code> directly with <code>raw = FALSE</code> since it is the default</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">poly</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">degree =</span> <span class="dv">4</span>, <span class="at">raw =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -606,7 +599,7 @@ attr(,"class")
 [1] "poly"   "matrix"</code></pre>
 </div>
 </div>
-<p>We see that these variables don’t directly have the format we would have assumed. But this is still a well-reasoned transformation. We can get the raw polynomial transformation by setting <code>raw = TRUE</code></p>
+<p>These variables don’t have the format we assumed. But this is still a well-reasoned transformation. We can get the raw polynomial transformation by setting <code>raw = TRUE</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">poly</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">degree =</span> <span class="dv">4</span>, <span class="at">raw =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -624,15 +617,20 @@ attr(,"class")
 </div>
 </div>
 <p>These transformations align with what we would expect. It is still recommended to stick with the default of <code>raw = FALSE</code> unless you have a reason not to do that.</p>
-<ol start="3" type="1">
-<li><p>Why is the default to return orthogonal vectors (perpendicular vectors)?</p></li>
+</section>
+</section>
+<section id="polynomial-regression-exercises" class="level1">
+<h1>Polynomial Regression Exercises</h1>
+<ol type="1">
+<li><p>Explore the <code>wage</code> dataset. What are the variables? How many observations are there? Is there any missing data? If so, how much? For simplicity in this lab, we are going to perform a <em>complete case analysis</em>. Create a new dataframe that is complete (only based on education, not <code>maritl</code> since we are not going to use that variable in this lab).</p></li>
+<li><p>For this lab, we are interested in predicting the variable <code>wage</code> from <code>age</code>, <code>health_ins</code>, <code>jobclass</code>, <code>education</code>, and <code>race</code>. Complete a brief univariate and bivariate EDA for each of these variables and the response.</p></li>
+<li><p>Why is the default to return orthogonal vectors (perpendicular vectors)? What advantage does this have over the regular vectors for regression?</p></li>
 <li><p>Using your EDA from before, what degree polynomial is needed for age vs wage?</p></li>
 <li><p>Fit a polynomial regression model with your chosen degree of the polynomial for age to predict wage.</p></li>
-<li><p>We need to choose the “best” degree polynomial regression model and one way is hypothesis testing. Fit polynomial regression models with age predicting wage with degrees 1 through 5.</p></li>
+<li><p>We need to choose the “best” degree polynomial regression model, and one way is hypothesis testing. Fit polynomial regression models with age predicting wage with degrees 1 through 5.</p></li>
 <li><p>Use either a drop-in deviance test or a Nested F Test to determine which model is best.</p></li>
 <li><p>Now create a plot that visualizes the fit of the data. Make sure to include the original data values and a line for the fit polynomial model.</p></li>
 </ol>
-</section>
 <section id="splines" class="level3">
 <h3 class="anchored" data-anchor-id="splines">Splines</h3>
 <p>To fit regression splines, we use the splines library. We saw that regression splines can be fit by constructing an appropriate matrix of basis functions. The <code>bs()</code> function generates the entire matrix of basis functions for splines with the specified set of knots. By default, cubic <code>bs()</code> splines are produced. Fitting wage to age using a regression spline is simple:</p>
@@ -640,17 +638,20 @@ attr(,"class")
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model2<span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> <span class="fu">bs</span>(age , <span class="at">knots =</span> <span class="fu">c</span>(a, b, c)), <span class="at">data =</span> Wage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here we have pre-specified knots at ages <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>. This will produce a spline with six basis functions. (Recall that a cubic spline with three knots has seven degrees of freedom; these degrees of freedom are used up by an intercept, plus six basis functions.) We could also use the df option to produce a spline with knots at uniform quantiles of the data.</p>
+</section>
+<section id="splines-exercises" class="level3">
+<h3 class="anchored" data-anchor-id="splines-exercises">Splines Exercises</h3>
 <ol start="9" type="1">
 <li><p>Use your EDA or new data visualizations to choose the 3 knots. Then fit the cubic spline model using your chosen knots.</p></li>
 <li><p>Another way to find the knots is quantiles. Use the <code>bs</code> function, specifying the correct number of degrees of freedom, to fit the cubic spline model using knots at the 25th, 50th, and 75th quantiles.</p></li>
-<li><p>In order to instead fit a natural spline, we use the <code>ns()</code> function. Here we fit a natural spline with four degrees of freedom. Change the code below to fit a natural spline of degree 3.</p></li>
+<li><p>To fit a natural spline, we use the <code>ns()</code> function. Here we fit a natural spline with four degrees of freedom. Change the code below to fit a natural cubic spline.</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> <span class="fu">ns</span>(age , <span class="at">df =</span> d), <span class="at">data =</span> Wage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="12" type="1">
 <li><p>Use all of the other variables of interest and refit your best-degree polynomial regression model, your cubic spline, and your natural spline model with the additional variables.</p></li>
-<li><p>Now we want to choose the best model for all the models above. Use AIC, BIC, and RMSE (square root of mean square error), model complexity, and residual plots, to choose the best model. Explicitly explain your reasoning.</p></li>
+<li><p>Now we want to choose the best model from all the models above. Use AIC, BIC, and RMSE (the square root of mean square error), model complexity, and residual plots, to choose the best model. Explicitly explain your reasoning.</p></li>
 </ol>
 
 

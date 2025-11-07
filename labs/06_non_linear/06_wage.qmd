@@ -1,20 +1,19 @@
 ---
 title: "Moving Beyond Linearity - Chapter 7 (ISLR)"
 subtitle: "Wage Data"
-categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 ## Lab Setup
 
-1)  Copy the project lab folder located at *Home -\> STA363_inst_files-\> labs*. If you check the box next to the folder name, then click the small gear icon you can "copy to" and put a copy of the folder in your newly created folder.
-2)  Now, click *File-\> Open Project* and navigate to the project file in the folder you just copied.
-3)  You can place your responses in the file *qmd* file included.
+1) Copy the project lab folder located at *Home -> STA363_inst_files-> labs*. If you check the box next to the folder name, then click the small gear icon you can "copy to" and put a copy of the folder in your newly created folder. 
+2) Now, click *File-> Open Project* and navigate to the project file in the folder you just copied. 
+3) You can place your responses in the file *qmd* file included. 
 
 ## Packages
 
-In this lab we will work with three packages: `tidyverse` which is a collection of packages for doing data analysis in a "tidy" way, `tidymodels` for statistical model coefficients, and `splines` for our splines models.
+In this lab, we will work with three packages: `tidyverse`, which is a collection of packages for data analysis in a "tidy" way; `tidymodels` for statistical model coefficients; and `splines` for our spline models.
 
-If you'd like to run your code in the Console as well you'll also need to load the packages there. To do so, run the following in the console.
+If you'd like to run your code in the Console as well, you'll need to load the packages there as well. To do so, run the following in the console.
 
 ```{r eval = FALSE}
 library(tidyverse) 
@@ -27,7 +26,7 @@ library(splines)
 For this lab, we are using `wage` data adapted from the `ISLR` package. This can be loaded in by running:
 
 ```{r}
-load("data/wage.rda")
+load(here::here("labs/data/wage.rda"))
 ```
 
 Below is a data dictionary for this dataset:
@@ -46,11 +45,6 @@ Below is a data dictionary for this dataset:
 | logwage    | Log of workers wage                                                                                                             |
 | wage       | Workers raw wage                                                                                                                |
 
-# Exercises
-
-1.  Explore the `wage` dataset. What are the variables? How many observations are there? Is there any missing data? If so how much? For simplicity in this particular lab, we are going to do *complete case analysis*. Create a new dataframe that is complete (only based on education, not `maritl` since we are not going to use that variable in this lab).
-
-2.  For this lab, we are interested in predicting the variable `wage` from `age`, `health_ins`, `jobclass`, `education`, and `race`. Complete a brief univariate and bivariate EDA for each of these varibles and with the response.
 
 ### Polynomial Regression
 
@@ -63,13 +57,13 @@ model1 <- lm(wage ~ poly(age , 4), data = wage)
 coef(summary(model1))
 ```
 
-Though we expect `age`, `age^2`, `age^3`, and `age^4`, what is happening is that it returns variables that are a basis of orthogonal polynomials, which means that each of the columns is a linear combination of the variables `age`, `age^2`, `age^3`, and `age^4`. We can see this by using `poly()` directly with `raw = FALSE` since it is the default
+Though we expect `age`, `age^2`, `age^3`, and `age^4`, the function it returns variables that are a basis of orthogonal polynomials, which means that each of the columns is a linear combination of the variables `age`, `age^2`, `age^3`, and `age^4`. We can see this by using `poly()` directly with `raw = FALSE` since it is the default
 
 ```{r}
 poly(1:6, degree = 4, raw = FALSE)
 ```
 
-We see that these variables don't directly have the format we would have assumed. But this is still a well-reasoned transformation. We can get the raw polynomial transformation by setting `raw = TRUE`
+These variables don't have the format we assumed. But this is still a well-reasoned transformation. We can get the raw polynomial transformation by setting `raw = TRUE`
 
 ```{r}
 poly(1:6, degree = 4, raw = TRUE)
@@ -77,13 +71,19 @@ poly(1:6, degree = 4, raw = TRUE)
 
 These transformations align with what we would expect. It is still recommended to stick with the default of `raw = FALSE` unless you have a reason not to do that.
 
-3.  Why is the default to return orthogonal vectors (perpendicular vectors)?
+# Polynomial Regression Exercises
+
+1.  Explore the `wage` dataset. What are the variables? How many observations are there? Is there any missing data? If so, how much? For simplicity in this lab, we are going to perform a *complete case analysis*. Create a new dataframe that is complete (only based on education, not `maritl` since we are not going to use that variable in this lab).
+
+2.  For this lab, we are interested in predicting the variable `wage` from `age`, `health_ins`, `jobclass`, `education`, and `race`. Complete a brief univariate and bivariate EDA for each of these variables and the response.
+
+3.  Why is the default to return orthogonal vectors (perpendicular vectors)? What advantage does this have over the regular vectors for regression?
 
 4.  Using your EDA from before, what degree polynomial is needed for age vs wage?
 
 5.  Fit a polynomial regression model with your chosen degree of the polynomial for age to predict wage.
 
-6.  We need to choose the "best" degree polynomial regression model and one way is hypothesis testing. Fit polynomial regression models with age predicting wage with degrees 1 through 5.
+6.  We need to choose the "best" degree polynomial regression model, and one way is hypothesis testing. Fit polynomial regression models with age predicting wage with degrees 1 through 5.
 
 7.  Use either a drop-in deviance test or a Nested F Test to determine which model is best.
 
@@ -100,11 +100,13 @@ model2<- lm(wage ~ bs(age , knots = c(a, b, c)), data = Wage)
 
 Here we have pre-specified knots at ages $a$, $b$, and $c$. This will produce a spline with six basis functions. (Recall that a cubic spline with three knots has seven degrees of freedom; these degrees of freedom are used up by an intercept, plus six basis functions.) We could also use the df option to produce a spline with knots at uniform quantiles of the data.
 
+### Splines Exercises 
+
 9.  Use your EDA or new data visualizations to choose the 3 knots. Then fit the cubic spline model using your chosen knots.
 
 10. Another way to find the knots is quantiles. Use the `bs` function, specifying the correct number of degrees of freedom, to fit the cubic spline model using knots at the 25th, 50th, and 75th quantiles.
 
-11. In order to instead fit a natural spline, we use the `ns()` function. Here we fit a natural spline with four degrees of freedom. Change the code below to fit a natural spline of degree 3.
+11. To fit a natural spline, we use the `ns()` function. Here we fit a natural spline with four degrees of freedom. Change the code below to fit a natural cubic spline.
 
 ```{r}
 #| eval: false
@@ -113,4 +115,6 @@ model3 <- lm(wage ~ ns(age , df = d), data = Wage)
 
 12. Use all of the other variables of interest and refit your best-degree polynomial regression model, your cubic spline, and your natural spline model with the additional variables.
 
-13. Now we want to choose the best model for all the models above. Use AIC, BIC, and RMSE (square root of mean square error), model complexity, and residual plots, to choose the best model. Explicitly explain your reasoning.
+13. Now we want to choose the best model from all the models above. Use AIC, BIC, and RMSE (the square root of mean square error), model complexity, and residual plots, to choose the best model. Explicitly explain your reasoning.
+
+
