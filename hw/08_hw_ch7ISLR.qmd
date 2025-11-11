@@ -1,7 +1,6 @@
 ---
 title: Homework 9
 subtitle: 'Chapter 7: Moving Beyond Linearity, ISLR'
-categories: ["⚠️ Warning: Page Under Revision"]
 ---
 
 `r if (knitr:::is_html_output()) '\\newcommand{\\E}{\\operatorname{E}}'`
