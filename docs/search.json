@@ -2818,35 +2818,35 @@
   {
     "objectID": "hw/08_hw_ch7ISLR.html",
     "href": "hw/08_hw_ch7ISLR.html",
-    "title": "Homework 9",
+    "title": "Homework 8",
     "section": "",
-    "text": "Each of your assignments will begin with the following steps.\n\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nCreating a new R project, inside your homework folder on the server, and giving it a sensible name such as homework_9 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw9.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+    "text": "Each of your assignments will begin with the following steps.\n\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nCreating a new R project, inside your homework folder on the server, and giving it a sensible name such as homework_8 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw8.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
   },
   {
     "objectID": "hw/08_hw_ch7ISLR.html#setup",
     "href": "hw/08_hw_ch7ISLR.html#setup",
-    "title": "Homework 9",
+    "title": "Homework 8",
     "section": "",
-    "text": "Each of your assignments will begin with the following steps.\n\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nCreating a new R project, inside your homework folder on the server, and giving it a sensible name such as homework_9 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw9.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+    "text": "Each of your assignments will begin with the following steps.\n\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nCreating a new R project, inside your homework folder on the server, and giving it a sensible name such as homework_8 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw8.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
   },
   {
     "objectID": "hw/08_hw_ch7ISLR.html#instructions",
     "href": "hw/08_hw_ch7ISLR.html#instructions",
-    "title": "Homework 9",
+    "title": "Homework 8",
     "section": "Instructions",
     "text": "Instructions\nBe sure to include the relevant R code as well as full sentences answering each of the questions (i.e. if I ask for the average, you can output the answer in R but also write a full sentence with the answer). Be sure to frequently save your files!\nIn this homework we will work with four packages: tidyverse which is a collection of packages for doing data analysis in a “tidy” way, tidymodels for statistical model coefficients, splines for our splines models and ISLR2 for the Boston data."
   },
   {
     "objectID": "hw/08_hw_ch7ISLR.html#code",
     "href": "hw/08_hw_ch7ISLR.html#code",
-    "title": "Homework 9",
+    "title": "Homework 8",
     "section": "Code",
     "text": "Code\n\nPolynomial Regression\nTo fit a degree 4 polynomial regression model you use:\n\nmodel1 &lt;- lm(wage ~ poly(age , 4, raw = TRUE), data = wage)\n\n\n\nCubic Spline\nTo fit a cubic spline (degree 3) polynomial regression model you use:\n\nmodel2&lt;- lm(wage ~ bs(age , knots = c(22, 33, 50), degree = 3), data = Wage)\n\nUse quantiles of the predictor to choose your knots. The choice should be motivated by some EDA.\n\n\nNatual Cubic Spline\nTo fit a degree natural cubic spline.\n\nmodel3 &lt;- lm(wage ~ ns(age,df = 4), data = Wage)\n\nInstead of providing the degrees of freedom (df), you can provide knots."
   },
   {
     "objectID": "hw/08_hw_ch7ISLR.html#exercises",
     "href": "hw/08_hw_ch7ISLR.html#exercises",
-    "title": "Homework 9",
+    "title": "Homework 8",
     "section": "Exercises",
     "text": "Exercises\nAll problems are from The secondary text is: An Introduction to Statistical Learning with Applications in R by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani – it is freely available online. Chapter 7. Abbreviated ISLR.\n\nlibrary(ISLR2)\n\n\nSuppose we fit a curve with basis functions \\(b_1(X) = X,\\space b_2(X) = (X − 1)^2I(X \\geq 1)\\). (Note that \\(I(X \\geq 1)\\) equals 1 for \\(X \\geq 1\\) and 0 otherwise.) We fit the linear regression model\n\n\\[Y = \\beta_0 + \\beta_1b_1(X) + \\beta_2b_2(X) + \\epsilon,\\] \nand obtain coefficient estimates \\(\\hat{\\beta}_0 = 1,\\space \\hat{\\beta}_1 = 1,\\space \\hat{\\beta}_2 = −2\\). Sketch the estimated curve between \\(X = −2\\) and \\(X = 2\\). Note the intercepts, slopes, and other relevant information.\n\n(ISLR,7,9) This question uses the variables dis (the weighted mean of distances to five Boston employment centers) and nox (nitrogen oxides concentration in parts per 10 million) from the Boston data (in package ISLR2). We will treat dis as the predictor and nox as the response.\n\n\nUse the poly() function to fit a cubic polynomial regression to predict nox using dis. Report the regression output, and plot the resulting data and polynomial fits.\nPlot the polynomial fits for a range of different polynomial degrees (say, from 1 to 5), and report the associated residual sum of squares.\nSelect the optimal degree for the polynomial, and explain your results.\nUse the bs() function to fit a regression spline to predict nox using dis. Report the output for the fit using four degrees of freedom. How did you choose the knots? Plot the resulting fit.\nNow fit a regression spline for a range of degrees of freedom, and plot the resulting fits and report the resulting RSS. Describe the results obtained.\nNow fit a natural regression spline for a range of degrees of freedom, and plot the resulting fits and report the resulting RSS. Describe the results obtained.\nPick an overall best model using various metrics, complexity, and regression assumptions to make your choice. They are the same metrics used in multiple linear regression."
   },

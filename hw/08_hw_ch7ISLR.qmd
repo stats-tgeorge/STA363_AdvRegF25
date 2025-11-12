@@ -1,5 +1,5 @@
 ---
-title: Homework 9
+title: Homework 8
 subtitle: 'Chapter 7: Moving Beyond Linearity, ISLR'
 ---
 
@@ -14,9 +14,9 @@ Each of your assignments will begin with the following steps.
 
 -   Going to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
 
--   Creating a new *R project*, inside your homework folder on the server, and giving it a sensible name such as *homework_9* and having that project in the course folder you created. 
+-   Creating a new *R project*, inside your homework folder on the server, and giving it a sensible name such as *homework_8* and having that project in the course folder you created. 
 
--   Create a new quarto document and give it a sensible name such as *hw9*.
+-   Create a new quarto document and give it a sensible name such as *hw8*.
 
 -   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.
 
