@@ -110,7 +110,7 @@ d.  **Clinical Trial II.** A randomized clinical trial investigated postnatal de
     h.  How does predicted `price` change as `logsqft` increases by 1 in Model 3?
     i.  How does predicted `price` change as `sqft` increases by 1%? As a hint, this is the same as multiplying `sqft` by 1.01.
     j.  Are LLSR assumptions satisfied in Model 3? Why or why not?
-    k.  Fit Model 4, with `logsqft` and `logprice` as the response and explanatory variables, respectively. Write out the regression line equation.
+    k.  Fit Model 4, with `logprice` and `logsqft` as the response and explanatory variables, respectively. Write out the regression line equation.
     l.  In Model 4, what is the effect on `price` corresponding to a 1% increase in `sqft`?
     m.  Are LLSR assumptions satisfied in Model 4? Why or why not?
     n.  Find another explanatory variable which can be added to Model 4 to create a model with a higher adjusted $R^2$ value. Interpret the coefficient of this added variable.
